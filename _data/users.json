@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Delphide",
+    "email": "delphide@gmail.com",
+    "password": "00003424",
+    "phone": "00003453",
+    "role": "user"
+  },
+  {
+    "name": "Stelaecor",
+    "email": "stelaecor@gmail.com",
+    "password": "00007925",
+    "phone": "00002385",
+    "role": "user"
+  },
+  {
+    "name": "Cinesanct",
+    "email": "cinesanct@gmail.com",
+    "password": "00007350",
+    "phone": "00001122",
+    "role": "user"
+  },
+  {
+    "name": "Accusage",
+    "email": "accusage@gmail.com",
+    "password": "00001181",
+    "phone": "00006204",
+    "role": "user"
+  },
+  {
+    "name": "Venoflex",
+    "email": "venoflex@gmail.com",
+    "password": "00006159",
+    "phone": "00006531",
+    "role": "user"
+  },
+  {
+    "name": "Zinca",
+    "email": "zinca@gmail.com",
+    "password": "00003427",
+    "phone": "00002609",
+    "role": "user"
+  },
+  {
+    "name": "Speedbolt",
+    "email": "speedbolt@gmail.com",
+    "password": "00007587",
+    "phone": "00007018",
+    "role": "user"
+  },
+  {
+    "name": "Comtract",
+    "email": "comtract@gmail.com",
+    "password": "00005156",
+    "phone": "00004195",
+    "role": "user"
+  },
+  {
+    "name": "Geeketron",
+    "email": "geeketron@gmail.com",
+    "password": "00007352",
+    "phone": "00005613",
+    "role": "user"
+  },
+  {
+    "name": "Centrexin",
+    "email": "centrexin@gmail.com",
+    "password": "00006630",
+    "phone": "00005379",
+    "role": "user"
+  }
+]

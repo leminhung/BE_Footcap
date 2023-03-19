@@ -1,0 +1,62 @@
+[
+  {
+    "_id": "62471527a185afc10e94d9fa",
+    "title": "Áo phông 3211",
+    "price": 113956.04,
+    "code": "ccee1315-57e3-4bfc-91f9-e9e555804f77",
+    "color": "green",
+    "status": "hết hàng",
+    "size": "M",
+    "description": "In aliqua consequat amet excepteur amet reprehenderit anim anim.",
+    "discount": 10,
+    "category": "620d1c5ac6003c68d049bbb0"
+  },
+  {
+    "_id": "6247152772d1d67d3ccf597f",
+    "title": "Áo phông 3112",
+    "price": 101930.96,
+    "code": "c4e2c317-94d8-4303-bfe8-83abe9af0bb4",
+    "color": "black",
+    "status": "hết hàng",
+    "size": "3XL",
+    "description": "Laborum Lorem ut adipisicing dolor consequat velit minim exercitation nostrud consequat veniam anim.",
+    "discount": 15,
+    "category": "620d1c5ac6003c68d049bbb0"
+  },
+  {
+    "_id": "62471527bf79255859fd419f",
+    "title": "Áo phông 3288",
+    "price": 261398.27,
+    "code": "cb286e10-62ec-4f5c-bd5f-7f8917b57f7f",
+    "color": "black",
+    "status": "hết hàng",
+    "size": "3XL",
+    "description": "Sit sunt est dolore anim et sunt cillum ad ad elit proident reprehenderit excepteur.",
+    "discount": 11,
+    "category": "620d1c5ac6003c68d049bbb0"
+  },
+  {
+    "_id": "6247152705e8d681d67d8733",
+    "title": "Áo phông 3215",
+    "price": 199986.22,
+    "code": "8ba1be89-98ca-498d-abc3-a8ac474c56be",
+    "color": "blue",
+    "status": "còn hàng",
+    "size": "3XL",
+    "description": "Mollit irure et quis eu cupidatat anim id sunt.",
+    "discount": 26,
+    "category": "620d1c5ac6003c68d049bbb0"
+  },
+  {
+    "_id": "6247152786c716ea7b340bfe",
+    "title": "Áo phông 3120",
+    "price": 253550.97,
+    "code": "ddfec930-1a01-40fd-bdd2-7555c42cfa99",
+    "color": "black",
+    "status": "còn hàng",
+    "size": "XXL",
+    "description": "Fugiat eiusmod sunt ex in labore esse ut aliquip pariatur dolore proident laborum.",
+    "discount": 21,
+    "category": "620d1c5ac6003c68d049bbb0"
+  }
+]
