@@ -2,13 +2,16 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const crypto = require("crypto");
-const client = require("../config/redis");
 
 const UserSchema = new mongoose.Schema(
   {
     name: {
       type: String,
       require: [true, "Please add a name"],
+    },
+    avatar: {
+      type: String,
+      default: "/images/hungdz.png",
     },
     email: {
       type: String,
@@ -22,7 +25,7 @@ const UserSchema = new mongoose.Schema(
     },
     phone: {
       type: String,
-      match: [/^(?:0|\+84)[1-9][0-9]{8,9}$/, "Please add a valid phone number"],
+      // match: [/^(?:0|\+84)[1-9][0-9]{8,9}$/, "Please add a valid phone number"],
     },
     password: {
       type: String,
@@ -32,7 +35,7 @@ const UserSchema = new mongoose.Schema(
     },
     role: {
       type: String,
-      enum: ["user", "visitor"],
+      enum: ["user", "visitor", "admin"],
       default: "user",
     },
     resetPasswordToken: String,
@@ -83,7 +86,6 @@ UserSchema.methods.signRefreshToken = async function () {
     }
   );
 
-  await client.set(this._id.toString(), refreshToken);
   return refreshToken;
 };
 

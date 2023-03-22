@@ -10,7 +10,7 @@ const { msgEnum } = require("../enum/message.enum");
 // @route     GET /api/v1/comments/:productId
 // @access    Private(Admin)
 exports.getAllCommentsForProduct = asyncHandler(async (req, res, next) => {
-  const comments = await Comment.find({ product: req.params.productId });
+  const comments = await Comment.find({ product: req.params.productId }).populate("user");
 
   if (!comments) {
     return next(new ErrorResponse(msgEnum.NOT_FOUND, codeEnum.NOT_FOUND));

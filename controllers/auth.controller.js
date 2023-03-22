@@ -44,18 +44,20 @@ exports.signIn = asyncHandler(async (req, res, next) => {
   const user = await User.findOne({ email }).select("+password");
 
   if (!user) {
-    return next(new ErrorResponse(msgEnum.UNAUTHORIZED, codeEnum.UNAUTHORIZED));
+    return next(new ErrorResponse(msgEnum.USER_NOT_FOUND, codeEnum.NOT_FOUND));
   }
 
   const checkMatch = await user.isMatchPassword(password);
   if (!checkMatch) {
-    return next(new ErrorResponse(msgEnum.UNAUTHORIZED, codeEnum.UNAUTHORIZED));
+    return next(
+      new ErrorResponse(msgEnum.WRONG_PASSWORD, codeEnum.UNAUTHORIZED)
+    );
   }
 
   const token = user.signToken();
   const refreshToken = await user.signRefreshToken();
 
-  res.status(codeEnum.SUCCESS).json({ token, refreshToken });
+  res.status(codeEnum.SUCCESS).json({ token, refreshToken, actor: user });
 });
 
 // @desc      SignOut user
@@ -205,7 +207,7 @@ exports.updateDetails = asyncHandler(async (req, res, next) => {
 });
 
 // @desc      Get current login user
-// @route     POST /api/v1/auth/me
+// @route     GET /api/v1/auth/me
 // @access    Private
 exports.getMe = asyncHandler(async (req, res, next) => {
   const user = await User.findById(req.user.id);
@@ -218,4 +220,52 @@ exports.getMe = asyncHandler(async (req, res, next) => {
 exports.getToken = asyncHandler(async (req, res, next) => {
   const token = req.user.signToken();
   res.status(codeEnum.SUCCESS).json({ token });
+});
+
+// @desc      Get all users
+// @route     GET /api/v1/auth/getallusers
+// @access    Private(Admin)
+exports.getAllUsers = asyncHandler(async (req, res, next) => {
+  const users = await User.find();
+  res.status(codeEnum.SUCCESS).json({ data: users });
+});
+
+// @desc      Get user
+// @route     GET /api/v1/auth/getuser/:userId
+// @access    Private(Admin)
+exports.getUser = asyncHandler(async (req, res, next) => {
+  const user = await User.findById(req.params.userId);
+  res.status(codeEnum.SUCCESS).json({ data: user });
+});
+
+// @desc      Update details user by admin
+// @route     PUT /api/v1/auth/updateuserdetails/:userId
+// @access    Private(Admin)
+exports.updateUserDetails = asyncHandler(async (req, res, next) => {
+  const fieldsToUpdate = {
+    name: req.body.name,
+    role: req.body.role,
+  };
+
+  const user = await User.findByIdAndUpdate(req.params.userId, fieldsToUpdate, {
+    new: true,
+    runValidators: true,
+  });
+
+  res.status(codeEnum.SUCCESS).json({ data: user });
+});
+
+// @desc      Delete user
+// @route     DELETE /api/v1/auth/deleteuser/:userId
+// @access    Private/Admin
+exports.deleteUser = asyncHandler(async (req, res, next) => {
+  const user = await User.findById(req.params.userId);
+
+  if (!user) {
+    return next(new ErrorResponse(msgEnum.NOT_FOUND, codeEnum.NOT_FOUND));
+  }
+
+  user.remove();
+
+  res.status(codeEnum.SUCCESS).json({ data: {} });
 });

@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const commentSchema = new mongoose.Schema(
   {
-    text: {
+    comment: {
       type: String,
       min: [1, "Content must be at least 1 character"],
       required: true,

@@ -3,6 +3,8 @@ const asyncHandler = require("../middleware/async");
 
 const Product = require("../models/Product.model");
 const Order = require("../models/Order.model");
+const OrderDetail = require("../models/OrderDetail.model");
+const User = require("../models/User.model");
 const { codeEnum } = require("../enum/status-code.enum");
 
 const {
@@ -30,8 +32,31 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
 // @route     POST /api/v1/order/create
 // @access    Public
 exports.createOrder = asyncHandler(async (req, res, next) => {
-  const order = await Order.create(req.body);
-  res.status(codeEnum.CREATED).json({ data: order });
+  // const order = await Order.create(req.body);
+  const { email, address, total_price, phone,
+    shippingAddress, products } = req.body
+  const user = await User.findOne({ email: email })
+  console.log(user);
+  const order = {
+    username: user.name,
+    user: user._id,
+    address: address,
+    total_price: total_price,
+    phone: phone,
+  }
+  console.log(order);
+  const ans = await Order.create(order);
+  const orderDetail = {
+    shippingAddress: shippingAddress, products: products,
+    order: ans._id
+  }
+  await OrderDetail.create(orderDetail);
+  res.status(codeEnum.CREATED).json({
+    data: {
+      ans,
+    
+    }
+  });
 });
 
 // @desc      Update order
@@ -49,7 +74,7 @@ exports.updateOrder = asyncHandler(async (req, res, next) => {
 // @route     GET /api/v1/order/:orderId
 // @access    Public
 exports.getOrder = asyncHandler(async (req, res, next) => {
-  const order = await Order.findById(req.params.orderId);
+  const order = await Order.findById(req.params.orderId).populate("user");
   res.status(codeEnum.SUCCESS).json({ data: order });
 });
 
@@ -57,7 +82,7 @@ exports.getOrder = asyncHandler(async (req, res, next) => {
 // @route     GET /api/v1/order
 // @access    Private(Admin)
 exports.getOrders = asyncHandler(async (req, res, next) => {
-  const orders = await Order.find();
+  const orders = await Order.find().populate("user");
   res.status(codeEnum.SUCCESS).json({ data: orders });
 });
 

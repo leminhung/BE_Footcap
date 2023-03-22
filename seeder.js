@@ -8,8 +8,8 @@ dotenv.config({ path: "./config/.env" });
 
 // Load models
 const Product = require("./models/Product.model");
-const User = require("./models/User.model");
-const Order = require("./models/Order.model");
+// const User = require("./models/User.model");
+// const Order = require("./models/Order.model");
 const Category = require("./models/Category.model");
 const Image = require("./models/Image.model");
 
@@ -38,10 +38,10 @@ const images = JSON.parse(
 // import into DB
 const importData = async () => {
   try {
-    await Product.create(products);
+    // await Product.create(products);
     // await User.create(users);
     // await Order.create(orders);
-    await Category.create(categories);
+    // await Category.create(categories);
     await Image.create(images);
     console.log("Data Imported...".green.inverse);
     process.exit();
@@ -53,10 +53,10 @@ const importData = async () => {
 // Delete data
 const deleteData = async () => {
   try {
-    await Product.deleteMany();
+    // await Product.deleteMany();
     // await User.deleteMany();
     // await Order.deleteMany();
-    await Category.deleteMany();
+    // await Category.deleteMany();
     await Image.deleteMany();
     console.log("Data Destroyed...".red.inverse);
     process.exit();

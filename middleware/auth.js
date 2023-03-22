@@ -4,7 +4,6 @@ const asyncHandler = require("./async");
 const ErrorResponse = require("../utils/ErrorResponse");
 const { msgEnum } = require("../enum/message.enum");
 const { codeEnum } = require("../enum/status-code.enum");
-const client = require("../config/redis");
 
 // Protect routes
 exports.protect = asyncHandler(async (req, res, next) => {
@@ -21,6 +20,7 @@ exports.protect = asyncHandler(async (req, res, next) => {
   }
 
   try {
+    console.log("token--", token);
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     req.user = await User.findById(decoded.id);
     next();
@@ -30,7 +30,7 @@ exports.protect = asyncHandler(async (req, res, next) => {
   }
 });
 
-// Grant access ti specific roles
+// Grant access to specific roles
 exports.authorize = (...roles) => {
   return (req, res, next) => {
     if (!roles.includes(req.user?.role)) {
@@ -51,18 +51,6 @@ exports.verifyRefreshToken = asyncHandler(async (req, res, next) => {
       refreshToken,
       process.env.REFRESH_TOKEN_SECRET
     );
-
-    const redisToken = await client.get(decoded.id);
-
-    if (!redisToken)
-      return next(
-        new ErrorResponse(msgEnum.TOKEN_INVALID, codeEnum.BAD_REQUEST)
-      );
-
-    if (redisToken !== refreshToken)
-      return next(
-        new ErrorResponse(msgEnum.TOKEN_INVALID, codeEnum.BAD_REQUEST)
-      );
 
     const user = await User.findById(decoded.id);
 

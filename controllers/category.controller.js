@@ -78,7 +78,7 @@ exports.updateCategory = asyncHandler(async (req, res, next) => {
 exports.getProductsForCategory = asyncHandler(async (req, res, next) => {
   const products = await Product.find({
     category: req.params.categoryId,
-  }).populate("comments");
+  }).populate("comments").populate("images");
 
   if (!products) {
     return next(new ErrorResponse(msgEnum.NOT_FOUND, codeEnum.NOT_FOUND));

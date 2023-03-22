@@ -4,6 +4,8 @@ const ErrorResponse = require("../utils/ErrorResponse");
 const asyncHandler = require("../middleware/async");
 
 const Product = require("../models/Product.model");
+const OrderDetail = require("../models/OrderDetail.model");
+
 
 const { codeEnum } = require("../enum/status-code.enum");
 const { msgEnum } = require("../enum/message.enum");
@@ -38,3 +40,29 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
     total: req.cookies.PRODUCT_CART.total,
   });
 });
+
+// @desc      Get orders detail
+// @route     GET /api/v1/ordersdetail
+// @access    Private(Admin)
+exports.getOrdersdetail = asyncHandler(async (req, res, next) => {
+  const ordersdetail = await OrderDetail.find().populate("order");
+  res.status(codeEnum.SUCCESS).json({ data: ordersdetail });
+});
+
+// @desc      Create order
+// @route     POST /api/v1/orderdetail/create
+// @access    Public
+exports.createOrderDetail = asyncHandler(async (req, res, next) => {
+  const orderdetail = await OrderDetail.create(req.body);
+  res.status(codeEnum.CREATED).json({ data: orderdetail });
+});
+
+// @desc      lấy order detail theo orderid
+// @route     DELETE /api/v1/order-detai/:orderId
+// @access    Public
+exports.getByOrderId=asyncHandler(async(req,res,next)=>{
+  
+  const orderDetail = await OrderDetail.find({order:req.params.orderId});
+
+  res.status(codeEnum.CREATED).json({ data: orderDetail});
+})

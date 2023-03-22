@@ -20,12 +20,18 @@ exports.getAllProducts = asyncHandler(async (req, res, next) => {
 // @route     GET /api/v1/products/:productId
 // @access    Public
 exports.getProduct = asyncHandler(async (req, res, next) => {
-  const product = await Product.findById({ _id: req.params.productId });
-
+  const product = await Product.findById({ _id: req.params.productId })
+    .populate("images")
+    .populate("category")
+    .populate({
+      path: "comments",
+      populate: {
+        path: "user",
+      },
+    });
   if (!product) {
     return next(new ErrorResponse(msgEnum.NOT_FOUND, codeEnum.NOT_FOUND));
   }
-
   res.status(codeEnum.SUCCESS).json({ data: product });
 });
 
@@ -49,7 +55,7 @@ exports.deleteProduct = asyncHandler(async (req, res, next) => {
 
   product.remove();
 
-  res.status(code.SUCCESS).json({ data: {} });
+  res.status(codeEnum.SUCCESS).json({ data: {} });
 });
 
 // @desc      Update product

@@ -20,7 +20,24 @@ const advancedResults = (model, populate) => async (req, res, next) => {
   );
 
   // Find resource
-  query = model.find(JSON.parse(queryStr));
+  // query = model.find(JSON.parse(queryStr));
+  var conditions = { ...JSON.parse(queryStr) };
+
+  if (req.query.title) {
+    conditions = {};
+    // full-text search
+    // conditions.$text = { $search: `\"${req.query.title}\"` };
+
+    // use regex to find
+    var regex = new RegExp(`${req.query.title}`);
+    conditions.title = { $regex: regex, $options: "i" };
+  }
+  console.log(conditions);
+
+  query = model.find(conditions);
+
+  // calculate total data
+  const total = await query.clone().count();
 
   // Selecting fields
   if (req.query.select) {
@@ -37,10 +54,9 @@ const advancedResults = (model, populate) => async (req, res, next) => {
   }
 
   const page = parseInt(req.query.page, 10) || 1;
-  const limit = parseInt(req.query.limit, 10) || 10;
+  const limit = parseInt(req.query.limit, 10) || 8;
   const startIndex = (page - 1) * limit;
   const endIndex = page * limit;
-  const total = await model.countDocuments();
 
   query = query.skip(startIndex).limit(limit);
 

@@ -20,6 +20,6 @@ const routers = [
 
 module.exports = (app) => {
   routers.forEach((router) => {
-    app.use("/api/v1", router);
+    app.use("/api/v1/", router);
   });
 };

@@ -42,10 +42,10 @@ app.get("/", (req, res, next) => {
 // Import router
 const router = require("./routes");
 
+router(app);
+
 // Error handlers
 app.use(errorHandler);
-
-router(app);
 
 const server = app.listen(PORT, () => {
   console.log(`App listening at port ${PORT}`.yellow.bold);

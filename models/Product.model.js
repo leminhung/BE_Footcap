@@ -3,17 +3,17 @@ const slugify = require("slugify");
 
 const productSchema = new mongoose.Schema(
   {
-    title: { type: String, required: true },
+    title: { type: String, required: true, text: true },
     price: {
       type: Number,
       required: true,
       min: [0, "Price must be at least 0"],
     },
     code: { type: String, required: true },
-    color: { type: String, required: true },
+    color: { type: [String], required: true },
     status: { type: String, required: true },
     size: {
-      type: String,
+      type: [String],
       enum: ["XL", "L", "M", "S", "XXL", "3XL"],
       required: true,
     },

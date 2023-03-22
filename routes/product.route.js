@@ -21,8 +21,8 @@ router.get(apiEnum.API_GET_PRODUCT, getProduct);
 
 router.get(
   apiEnum.API_GET_PRODUCTS,
-  // protect,
   // authorize("admin"),
+  // protect,
   advancedResults(Product, { path: "images", select: "path" }),
   getAllProducts
 );
