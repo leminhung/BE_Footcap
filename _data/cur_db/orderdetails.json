@@ -1,0 +1,279 @@
+[{
+  "_id": {
+    "$oid": "62f893a3426d6abccaae54fb"
+  },
+  "order": {
+    "$oid": "62f74a716a9c608a345dc829"
+  },
+  "shippingAddress": {
+    "fullName": "Nguyen Long Nhat",
+    "address": "Ha Noi",
+    "cellPhone": "0966108364",
+    "city": "Ha Noi 2",
+    "postalCode": "001234",
+    "country": "Viet Nam"
+  },
+  "products": [
+    {
+      "product": {
+        "$oid": "62ede31388e1515506dc1a9c"
+      },
+      "quantity": 2,
+      "color": "black",
+      "size": "XL",
+      "price": 120000
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "62f88f60426d6abccaae54ef"
+  },
+  "shippingAddress": {
+    "fullName": "Nguyen Long Nhat",
+    "address": "Ha Noi",
+    "cellPhone": "0966108364",
+    "city": "Ha Noi",
+    "postalCode": "001234",
+    "country": "Viet Nam"
+  },
+  "order": {
+    "$oid": "62f74a716a9c608a345dc829"
+  },
+  "products": [
+    {
+      "product": {
+        "$oid": "62ede31388e1515506dc1a9c"
+      },
+      "quantity": 2,
+      "color": "Black",
+      "size": "XL",
+      "price": 120000,
+      "_id": {
+        "$oid": "62f8973a7fdb6316c387b5c1"
+      }
+    },
+    {
+      "product": {
+        "$oid": "62ede31388e1515506dc1a9c"
+      },
+      "quantity": 2,
+      "color": "Blue",
+      "size": "XL",
+      "price": 120000,
+      "_id": {
+        "$oid": "62f8973a7fdb6316c387b5c2"
+      }
+    }
+  ],
+  "isPaid": true,
+  "isDelivered": true,
+  "createdAt": {
+    "$date": "2022-08-14T06:33:30.616Z"
+  },
+  "updatedAt": {
+    "$date": "2022-08-14T06:33:30.616Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6300b10937a46fa3e005834a"
+  },
+  "shippingAddress": {
+    "fullName": "asd",
+    "address": "asd",
+    "cellPhone": "0399614939",
+    "city": "Ha noi",
+    "postalCode": "563",
+    "country": "Viet Nam"
+  },
+  "order": {
+    "$oid": "6300b10937a46fa3e0058348"
+  },
+  "products": [
+    {
+      "product": {
+        "$oid": "62ede3135ce4b1093b84254a"
+      },
+      "quantity": 2,
+      "color": "green",
+      "size": "XXL",
+      "price": 232139.46,
+      "_id": {
+        "$oid": "6300b10937a46fa3e005834b"
+      }
+    }
+  ],
+  "isPaid": false,
+  "isDelivered": false,
+  "createdAt": {
+    "$date": "2022-08-20T10:01:45.841Z"
+  },
+  "updatedAt": {
+    "$date": "2022-08-20T10:01:45.841Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63023b5f8fcb5ab3c102326d"
+  },
+  "shippingAddress": {
+    "fullName": "hfdhfdhdf",
+    "address": "sdfgfdf",
+    "cellPhone": "0843987789",
+    "city": "Ha noi",
+    "postalCode": "563",
+    "country": "Viet Nam"
+  },
+  "order": {
+    "$oid": "63023b5f8fcb5ab3c102326b"
+  },
+  "products": [
+    {
+      "product": {
+        "$oid": "62ede3135ce4b1093b84254a"
+      },
+      "quantity": 4,
+      "color": "green",
+      "size": "XXL",
+      "price": 232139.46,
+      "_id": {
+        "$oid": "63023b5f8fcb5ab3c102326e"
+      }
+    }
+  ],
+  "isPaid": false,
+  "isDelivered": false,
+  "createdAt": {
+    "$date": "2022-08-21T14:04:15.467Z"
+  },
+  "updatedAt": {
+    "$date": "2022-08-21T14:04:15.467Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63023bbb6dfa77df08cbbfcc"
+  },
+  "shippingAddress": {
+    "fullName": "Tommy Nguyen",
+    "address": "Đan Phượng Hà Nội",
+    "cellPhone": "0966108364",
+    "city": "Ha noi",
+    "postalCode": "563",
+    "country": "Viet Nam"
+  },
+  "order": {
+    "$oid": "63023bbb6dfa77df08cbbfca"
+  },
+  "products": [
+    {
+      "product": {
+        "$oid": "62471527bf79255859fd419f"
+      },
+      "quantity": 3,
+      "color": "brown",
+      "size": "L",
+      "price": 100540.95,
+      "_id": {
+        "$oid": "63023bbb6dfa77df08cbbfcd"
+      }
+    },
+    {
+      "product": {
+        "$oid": "62ede313420a49d5147abb53"
+      },
+      "quantity": 4,
+      "color": "green",
+      "size": "M",
+      "price": 292928.29,
+      "_id": {
+        "$oid": "63023bbb6dfa77df08cbbfce"
+      }
+    }
+  ],
+  "isPaid": false,
+  "isDelivered": false,
+  "createdAt": {
+    "$date": "2022-08-21T14:05:47.518Z"
+  },
+  "updatedAt": {
+    "$date": "2022-08-21T14:05:47.518Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "630248767b34bf24b63ee12c"
+  },
+  "shippingAddress": {
+    "fullName": "Huyền",
+    "address": "Đan Phượng",
+    "cellPhone": "0966614730",
+    "city": "Ha noi",
+    "postalCode": "563",
+    "country": "Viet Nam"
+  },
+  "order": {
+    "$oid": "630248767b34bf24b63ee12a"
+  },
+  "products": [
+    {
+      "product": {
+        "$oid": "62ede3135ce4b1093b84254a"
+      },
+      "quantity": 2,
+      "color": "green",
+      "size": "XXL",
+      "price": 232139.46,
+      "_id": {
+        "$oid": "630248767b34bf24b63ee12d"
+      }
+    }
+  ],
+  "isPaid": false,
+  "isDelivered": false,
+  "createdAt": {
+    "$date": "2022-08-21T15:00:06.449Z"
+  },
+  "updatedAt": {
+    "$date": "2022-08-21T15:00:06.449Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63027745732c52c5660c8e8a"
+  },
+  "shippingAddress": {
+    "fullName": "Nguyễn Huyền",
+    "address": "Đan Phượng",
+    "cellPhone": "0966614730",
+    "city": "Ha noi",
+    "postalCode": "563",
+    "country": "Viet Nam"
+  },
+  "order": {
+    "$oid": "63027745732c52c5660c8e88"
+  },
+  "products": [
+    {
+      "product": {
+        "$oid": "62ede3135ce4b1093b84254a"
+      },
+      "quantity": 2,
+      "color": "green",
+      "size": "XXL",
+      "price": 232139.46,
+      "_id": {
+        "$oid": "63027745732c52c5660c8e8b"
+      }
+    }
+  ],
+  "isPaid": false,
+  "isDelivered": false,
+  "createdAt": {
+    "$date": "2022-08-21T18:19:49.882Z"
+  },
+  "updatedAt": {
+    "$date": "2022-08-21T18:19:49.882Z"
+  },
+  "__v": 0
+}]

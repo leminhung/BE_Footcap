@@ -1,6 +1,8 @@
 const crypto = require("crypto");
 
 const User = require("../models/User.model");
+const Coupon = require("../models/Coupon.model");
+const Product = require("../models/Product.model");
 
 const asyncHandler = require("../middleware/async");
 

@@ -7,6 +7,7 @@ const connectDB = async () => {
       process.env.MONGO_URI,
       (err, db) => {
         if (err) throw err;
+        console.log(`MongoDb connected`.cyan.bold);
         db.collection("products").createIndex({
           title: "text",
         });
@@ -15,7 +16,6 @@ const connectDB = async () => {
         useNewUrlParser: true,
       }
     );
-    console.log(`MongoDb connected`.cyan.bold);
   } catch (error) {
     console.log("[err--]", error);
   }

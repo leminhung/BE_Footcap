@@ -1,4 +1,4 @@
-const Image = require("../models/Image.model");
+const Assets = require("../models/Assets.model");
 const Product = require("../models/Product.model");
 
 const asyncHandler = require("../middleware/async");
@@ -19,7 +19,7 @@ exports.getAllImages = asyncHandler(async (req, res, next) => {
 // @route     GET /api/v1/images/:imageId
 // @access    Private(Admin)
 exports.getImage = asyncHandler(async (req, res, next) => {
-  const image = await Image.findById({ _id: req.params.imageId });
+  const image = await Assets.findById({ _id: req.params.imageId });
 
   if (!image) {
     return next(new ErrorResponse(msgEnum.NOT_FOUND, codeEnum.NOT_FOUND));
@@ -32,7 +32,7 @@ exports.getImage = asyncHandler(async (req, res, next) => {
 // @route     DELETE /api/v1/images/:imageId
 // @access    Private(Admin)
 exports.deleteImage = asyncHandler(async (req, res, next) => {
-  const image = await Image.findById(req.params.imageId);
+  const image = await Assets.findById(req.params.imageId);
 
   if (!image) {
     return next(new ErrorResponse(msgEnum.NOT_FOUND, codeEnum.NOT_FOUND));

@@ -15,12 +15,21 @@ const orderSchema = new mongoose.Schema({
     required: true,
   },
 
-  // Trong giỏ: false
-  // Đã đặt: true
-  status: { type: Boolean, required: true, default: false },
+  // Trạng thái đơn hàng (đang chờ xử lý, đã xử lý, đã giao hàng, hủy đơn hàng, ...)
+  status: { type: String, required: true, default: "đang chờ xử lý" },
+  shipping_fee: {
+    type: Number,
+  },
+  coupon_id: {
+    type: Number,
+  },
+  affiliate_id: {
+    type: Number,
+  },
   note: {
     type: String,
   },
+  delivery_at: { type: Date },
   total_price: {
     type: Number,
     min: [0, "Total price must be at least 0"],
@@ -28,7 +37,7 @@ const orderSchema = new mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
-    required: true
+    required: true,
   },
 });
 

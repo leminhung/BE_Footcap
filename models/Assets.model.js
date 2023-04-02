@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 
-const ImageSchema = new mongoose.Schema(
+const AssetsSchema = new mongoose.Schema(
   {
-    path: {
+    filename: {
       type: String,
       required: true,
     },
@@ -15,6 +15,6 @@ const ImageSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const Image = mongoose.model("Image", ImageSchema);
+const Assets = mongoose.model("Assets", AssetsSchema);
 
-module.exports = Image;
+module.exports = Assets;

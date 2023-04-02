@@ -1,5 +1,5 @@
 const Product = require("../models/Product.model");
-const Image = require("../models/Image.model");
+const Assets = require("../models/Assets.model");
 
 const ErrorResponse = require("../utils/ErrorResponse");
 const asyncHandler = require("../middleware/async");
@@ -21,7 +21,7 @@ exports.getAllProducts = asyncHandler(async (req, res, next) => {
 // @access    Public
 exports.getProduct = asyncHandler(async (req, res, next) => {
   const product = await Product.findById({ _id: req.params.productId })
-    .populate("images")
+    .populate("assets")
     .populate("category")
     .populate({
       path: "comments",

@@ -7,7 +7,7 @@ const {
   deleteImage,
 } = require("../controllers/image.controller ");
 
-const Image = require("../models/Image.model");
+const Assets = require("../models/Assets.model");
 
 const advancedResults = require("../middleware/advancedResults");
 const { protect, authorize } = require("../middleware/auth");
@@ -18,7 +18,7 @@ router.get(
   apiEnum.API_GET_IMAGES,
   protect,
   authorize("admin"),
-  advancedResults(Image, ""),
+  advancedResults(Assets, ""),
   getAllImages
 );
 

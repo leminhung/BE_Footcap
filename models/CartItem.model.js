@@ -1,10 +1,24 @@
 const mongoose = require("mongoose");
 
-const CartSchema = new mongoose.Schema(
+const CartItemSchema = new mongoose.Schema(
   {
-    userId: {
+    cartId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
+    },
+    productId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+    },
+    quantity: {
+      type: Number,
+      // required: true,
+      min: [0, "Quantity must be at least 0"],
+    },
+    price: {
+      type: Number,
+      // required: true,
+      min: [0, "Price must be at least 0"],
     },
     // total_quantity: {
     //   type: Number,
@@ -33,13 +47,13 @@ const CartSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-// CartSchema.virtual("productss", {
+// CartItemSchema.virtual("productss", {
 //   ref: "Product",
 //   localField: "_id",
 //   foreignField: "cart",
 //   justOne: false,
 // });
 
-const Cart = mongoose.model("Cart", CartSchema);
+const CartItem = mongoose.model("CartItem", CartItemSchema);
 
-module.exports = Cart;
+module.exports = CartItem;

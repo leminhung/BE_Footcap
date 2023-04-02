@@ -1,0 +1,46 @@
+[{
+  "_id": {
+    "$oid": "620c7995248766f5b446da61"
+  },
+  "userId": {
+    "$oid": "620b27a830288d0b898c4c8b"
+  },
+  "total_quantity": 7,
+  "total_price": 530859,
+  "products": [
+    {
+      "productId": {
+        "$oid": "6209cc0c8f9630d09ac1d42b"
+      },
+      "quantity": 3,
+      "_id": {
+        "$oid": "620c7995248766f5b446da62"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6209cc0c8f9630d09ac1d42c"
+      },
+      "quantity": 2,
+      "_id": {
+        "$oid": "620c7a75162e2e41228c73b6"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6209cc0c8f9630d09ac1d42d"
+      },
+      "quantity": 2,
+      "_id": {
+        "$oid": "620c7cbd6aa37b7087ab297f"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-02-16T04:12:05.580Z"
+  },
+  "updatedAt": {
+    "$date": "2022-02-16T04:36:16.051Z"
+  },
+  "__v": 2
+}]
