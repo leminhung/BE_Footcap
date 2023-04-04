@@ -32,7 +32,7 @@ const advancedResults = (model, populate) => async (req, res, next) => {
     var regex = new RegExp(`${req.query.title}`);
     conditions.title = { $regex: regex, $options: "i" };
   }
-  console.log(conditions);
+  // console.log(conditions);
 
   query = model.find(conditions);
 
