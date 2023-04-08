@@ -31,7 +31,7 @@ exports.register = asyncHandler(async (req, res, next) => {
 
   const token = user.signToken();
 
-  res.status(codeEnum.SUCCESS).json({ token });
+  res.status(codeEnum.SUCCESS).json({ token, actor: user });
 });
 
 // @desc      Login user
@@ -142,36 +142,8 @@ exports.resetPassword = asyncHandler(async (req, res, next) => {
   res.status(codeEnum.SUCCESS).json({ token });
 });
 
-// @desc      Reset password
-// @route     GET /api/v1/auth/resetpassword
-// @access    Public
-exports.resetPassword = asyncHandler(async (req, res, next) => {
-  const resetPasswordToken = crypto
-    .createHash("sha256")
-    .update(req.params.reset - token)
-    .digest("hex");
-
-  const user = await User.findOne({
-    resetPasswordToken,
-    resetPasswordExpire: { $gt: Date.now() },
-  });
-
-  if (!user) {
-    return next(new ErrorResponse(msgEnum.TOKEN_INVALID, 400));
-  }
-
-  user.password = req.body.password;
-  user.resetPasswordToken = undefined;
-  user.resetPasswordExpire = undefined;
-  await user.save();
-
-  const token = user.signToken();
-
-  res.status(codeEnum.SUCCESS).json({ token });
-});
-
 // @desc      Update password
-// @route     PUT /api/v1/auth/updatepassword
+// @route     PUT /api/v1/auth/update-password
 // @access    Private
 exports.updatePassword = asyncHandler(async (req, res, next) => {
   const { newPassword, currentPassword } = req.body;
@@ -188,16 +160,19 @@ exports.updatePassword = asyncHandler(async (req, res, next) => {
 
   const token = user.signToken();
 
-  res.status(codeEnum.SUCCESS).json({ token });
+  res.status(codeEnum.SUCCESS).json({ token, actor: user });
 });
 
 // @desc      Update details user
-// @route     PUT /api/v1/auth/updatedetails
+// @route     PUT /api/v1/auth/update-details
 // @access    Private
 exports.updateDetails = asyncHandler(async (req, res, next) => {
   const fieldsToUpdate = {
     email: req.body.email,
     name: req.body.name,
+    phone: req.body.phone,
+    avatar: req.body.avatar,
+    date: req.body.date,
   };
 
   const user = await User.findByIdAndUpdate(req.user.id, fieldsToUpdate, {
@@ -205,7 +180,7 @@ exports.updateDetails = asyncHandler(async (req, res, next) => {
     runValidators: true,
   });
 
-  res.status(codeEnum.SUCCESS).json({ data: user });
+  res.status(codeEnum.SUCCESS).json({ actor: user });
 });
 
 // @desc      Get current login user

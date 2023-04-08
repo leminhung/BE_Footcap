@@ -9,6 +9,10 @@ const UserSchema = new mongoose.Schema(
       type: String,
       require: [true, "Please add a name"],
     },
+    date: {
+      type: String,
+      default: "2001-02-01",
+    },
     avatar: {
       type: String,
       default: "/images/hungdz.png",

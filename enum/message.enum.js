@@ -20,7 +20,7 @@ exports.msgEnum = {
   TOKEN_NOT_FOUND: "Không tìm thấy token",
   UPDATE_SUCCESS: "Cập nhật thành công",
   USER_NOT_FOUND: "Người dùng không tồn tại",
-  USER_EXIST: "Tài khoản đã tồn tại",
+  USER_EXIST: "User had already existed",
   WRONG_PASSWORD: "Mật khẩu không đúng",
   CURRENT_PASSWORD_INVALID: "Mật khẩu hiện tại không hợp lệ",
   NEW_PASSWORD_INVALID: "Mật khẩu mới không hợp lệ",
