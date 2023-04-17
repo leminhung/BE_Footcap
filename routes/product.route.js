@@ -8,6 +8,7 @@ const {
   deleteProduct,
   updateProduct,
   productPhotoUpload,
+  listRelated,
 } = require("../controllers/product.controller");
 
 const Product = require("../models/Product.model");
@@ -33,6 +34,8 @@ router.post(
   authorize("admin"),
   createProduct
 );
+
+router.get(apiEnum.API_GET_RELATED_PRODUCTS, listRelated);
 
 router.delete(
   apiEnum.API_DELETE_PRODUCT,

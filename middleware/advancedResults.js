@@ -21,18 +21,14 @@ const advancedResults = (model, populate) => async (req, res, next) => {
 
   // Find resource
   // query = model.find(JSON.parse(queryStr));
-  var conditions = { ...JSON.parse(queryStr) };
+  let conditions = { ...JSON.parse(queryStr) };
 
   if (req.query.title) {
-    conditions = {};
-    // full-text search
-    // conditions.$text = { $search: `\"${req.query.title}\"` };
+    delete conditions.title;
 
-    // use regex to find
-    var regex = new RegExp(`${req.query.title}`);
-    conditions.title = { $regex: regex, $options: "i" };
+    // full-text search
+    conditions.$text = { $search: `\"${req.query.title}\"` };
   }
-  // console.log(conditions);
 
   query = model.find(conditions);
 

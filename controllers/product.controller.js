@@ -8,6 +8,7 @@ const { codeEnum } = require("../enum/status-code.enum");
 const { msgEnum } = require("../enum/message.enum");
 
 const cloudinary = require("../utils/cloudinaryConfig");
+const { APIFeatures } = require("../utils/api_features");
 
 // @desc      Get all products
 // @route     GET /api/v1/products
@@ -112,5 +113,34 @@ exports.productPhotoUpload = asyncHandler(async (req, res, next) => {
       product: req.params.productId,
     });
     res.status(codeEnum.SUCCESS).json({ msg: msgEnum.UPLOAD_SUCCESS });
+  });
+});
+
+// @desc      Get related products
+// @route     GET /api/v1/products/related
+// @access    Public
+exports.listRelated = asyncHandler(async (req, res, next) => {
+  console.log(req.query);
+  const product = await Product.findById(req.query.productId).exec();
+
+  const total = await Product.find({
+    _id: { $ne: product._id },
+    category: req.query.cate,
+  }).exec();
+
+  const features = new APIFeatures(
+    Product.find({
+      _id: { $ne: product._id },
+      category: req.query.cate,
+    }),
+    req.query
+  ).paginating();
+
+  const products = await features.query;
+  return res.status(codeEnum.SUCCESS).json({
+    data: {
+      length: total.length,
+      data: products,
+    },
   });
 });

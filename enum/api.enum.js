@@ -22,6 +22,7 @@ exports.apiEnum = {
   API_DELETE_PRODUCT: "/products/:productId",
   API_UPDATE_PRODUCT: "/products/:productId",
   API_CREATE_PRODUCT: "/products/add-product",
+  API_GET_RELATED_PRODUCTS: "/products/related",
   API_UPLOAD_PRODUCT_PHOTO: "/products/:productId/photo",
   API_ORDER_GET_PRODUCTS: "/order/products",
   API_CREATE_ORDER: "/order/create",
