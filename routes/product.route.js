@@ -19,6 +19,7 @@ const { protect, authorize } = require("../middleware/auth");
 const { apiEnum } = require("../enum/api.enum");
 
 router.get(apiEnum.API_GET_PRODUCT, getProduct);
+router.get(apiEnum.API_GET_RELATED_PRODUCTS, listRelated);
 
 router.get(
   apiEnum.API_GET_PRODUCTS,
@@ -34,8 +35,6 @@ router.post(
   authorize("admin"),
   createProduct
 );
-
-router.get(apiEnum.API_GET_RELATED_PRODUCTS, listRelated);
 
 router.delete(
   apiEnum.API_DELETE_PRODUCT,
