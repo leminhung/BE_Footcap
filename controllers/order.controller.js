@@ -32,30 +32,27 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
 // @route     POST /api/v1/order/create
 // @access    Public
 exports.createOrder = asyncHandler(async (req, res, next) => {
-  // const order = await Order.create(req.body);
-  const { email, address, total_price, phone,
-    shippingAddress, products } = req.body
-  const user = await User.findOne({ email: email })
-  console.log(user);
+  const { email, address, total_price, phone, shippingAddress, products } =
+    req.body;
+  const user = await User.findOne({ email });
   const order = {
     username: user.name,
     user: user._id,
     address: address,
     total_price: total_price,
     phone: phone,
-  }
-  console.log(order);
+  };
   const ans = await Order.create(order);
   const orderDetail = {
-    shippingAddress: shippingAddress, products: products,
-    order: ans._id
-  }
+    shippingAddress: shippingAddress,
+    products: products,
+    order: ans._id,
+  };
   await OrderDetail.create(orderDetail);
   res.status(codeEnum.CREATED).json({
     data: {
       ans,
-    
-    }
+    },
   });
 });
 

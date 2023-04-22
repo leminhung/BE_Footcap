@@ -1,10 +1,16 @@
 const express = require("express");
 const router = express.Router();
 
-const { protect } = require("../middleware/auth");
-const { stripeCtrl } = require("../controllers/stripe.controller");
+const {
+  createCheckoutSession,
+  webhookHandler,
+} = require("../controllers/stripe.controller");
 
-//router.get('/allusers', allUsers);
-router.post("/payment", protect, stripeCtrl);
+router.post("/stripe/create-checkout-session", createCheckoutSession);
+router.post(
+  "/stripe/webhook",
+  express.json({ type: "application/json" }),
+  webhookHandler
+);
 
 module.exports = router;
