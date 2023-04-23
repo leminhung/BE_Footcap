@@ -43,10 +43,6 @@ const productSchema = new mongoose.Schema(
       ref: "Category",
       required: true,
     },
-    order: {
-      type: mongoose.Schema.ObjectId,
-      ref: "Order",
-    },
   },
   {
     toJSON: { virtuals: true },

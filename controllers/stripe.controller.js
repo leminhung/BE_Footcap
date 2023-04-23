@@ -3,6 +3,7 @@ const Stripe = require("stripe");
 
 const Order = require("../models/Order.model");
 const asyncHandler = require("../middleware/async");
+const { roundNumber } = require("../utils/roundNumber");
 
 require("dotenv").config();
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
@@ -11,10 +12,18 @@ const default_img =
   "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/d44fa06fc83f4644b7e8acbc01160e1b_9366/NMD_R1_Primeblue_Shoes_Black_GZ9258_01_standard.jpg";
 
 exports.createCheckoutSession = asyncHandler(async (req, res, next) => {
+  const cartItems = req.body.cartItems.map((item) => {
+    return {
+      product: item.product,
+      quantity: item.quantity,
+    };
+  });
+
   const customer = await stripe.customers.create({
     metadata: {
       userId: req.body.userId,
-      cart: JSON.stringify(req.body.cartItems.toString()),
+      discount: req.body.discount,
+      cart: JSON.stringify(cartItems),
     },
   });
 
@@ -29,11 +38,18 @@ exports.createCheckoutSession = asyncHandler(async (req, res, next) => {
             id: item.product,
           },
         },
-        unit_amount: item.price * 100,
+        unit_amount: item.price,
       },
       quantity: item.quantity,
     };
   });
+
+  // // Add coupon
+  // const subscription = await stripe.subscriptions.create({
+  //   customer: "cus_4fdAW5ftNQow1a",
+  //   items: [{ price: "price_CBb6IXqvTLXp3f" }],
+  //   coupon: "free-period",
+  // });
 
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
@@ -86,6 +102,11 @@ exports.createCheckoutSession = asyncHandler(async (req, res, next) => {
       enabled: true,
     },
     line_items,
+    // discounts: [
+    //   {
+    //     coupon,
+    //   },
+    // ],
     mode: "payment",
     customer: customer.id,
     success_url: `${process.env.CLIENT_URL}/checkout/order-completed`,
@@ -98,39 +119,26 @@ exports.createCheckoutSession = asyncHandler(async (req, res, next) => {
 // Create order function
 const createOrder = async (customer, data) => {
   const Items = JSON.parse(customer.metadata.cart);
-  console.log(Items);
+  console.log({ customer, data });
 
-  // const products = Items.map((item) => {
-  //   return {
-  //     productId: item.id,
-  //     quantity: item.cartQuantity,
-  //   };
-  // });
+  const newOrder = new Order({
+    username: data.customer_details.name,
+    phone: data.customer_details.phone,
+    user: customer.metadata.userId,
+    products: Items,
+    address: data.customer_details.city + " - " + data.customer_details.country,
+    total_price: roundNumber(
+      data.amount_total * ((100 - customer.metadata.discount) / 100)
+    ),
+    status: data.payment_status,
+  });
 
-  // TRY TO FIX CREATE ORDER INTO DB VIA WEBHOOK
-
-  // const newOrder = new Order({
-  //   userId: customer.metadata.userId,
-  //   customerId: data.customer,
-  //   paymentIntentId: data.payment_intent,
-  //   products,
-  //   subtotal: data.amount_subtotal,
-  //   shipping: data.customer_details,
-  //   payment_status: data.payment_status,
-
-  //   username: user.name,
-  //   user: user._id,
-  //   address: address,
-  //   total_price: data.amount_total,
-  //   phone: phone,
-  // });
-
-  // try {
-  //   const savedOrder = await newOrder.save();
-  //   console.log("Processed Order:", savedOrder);
-  // } catch (err) {
-  //   console.log(err);
-  // }
+  try {
+    const savedOrder = await newOrder.save();
+    console.log("Processed Order:", savedOrder);
+  } catch (err) {
+    console.log(err);
+  }
 };
 
 // Stripe webhoook
@@ -138,8 +146,7 @@ exports.webhookHandler = asyncHandler(async (req, res, next) => {
   let data;
   let eventType;
 
-  // Check if webhook signing is configured.
-  let webhookSecret = process.env.STRIPE_WEB_HOOK;
+  let webhookSecret;
 
   if (webhookSecret) {
     // Retrieve the event by verifying the signature using the raw body and secret.
