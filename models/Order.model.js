@@ -39,10 +39,6 @@ const orderSchema = new mongoose.Schema({
     ref: "User",
     required: true,
   },
-  products: {
-    type: [Object],
-    ref: "Product",
-  },
 });
 
 orderSchema.pre("save", async function (next) {

@@ -4,6 +4,7 @@ const Stripe = require("stripe");
 const Order = require("../models/Order.model");
 const asyncHandler = require("../middleware/async");
 const { roundNumber } = require("../utils/roundNumber");
+const OrderDetail = require("../models/OrderDetail.model");
 
 require("dotenv").config();
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
@@ -16,6 +17,8 @@ exports.createCheckoutSession = asyncHandler(async (req, res, next) => {
     return {
       product: item.product,
       quantity: item.quantity,
+      price: item.price,
+      name: item.name,
     };
   });
 
@@ -38,18 +41,12 @@ exports.createCheckoutSession = asyncHandler(async (req, res, next) => {
             id: item.product,
           },
         },
-        unit_amount: item.price,
+        unit_amount:
+          roundNumber(item.price * ((100 - req.body.discount) / 100)) * 100,
       },
       quantity: item.quantity,
     };
   });
-
-  // // Add coupon
-  // const subscription = await stripe.subscriptions.create({
-  //   customer: "cus_4fdAW5ftNQow1a",
-  //   items: [{ price: "price_CBb6IXqvTLXp3f" }],
-  //   coupon: "free-period",
-  // });
 
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
@@ -72,7 +69,7 @@ exports.createCheckoutSession = asyncHandler(async (req, res, next) => {
             },
             maximum: {
               unit: "business_day",
-              value: 7,
+              value: 8,
             },
           },
         },
@@ -81,10 +78,10 @@ exports.createCheckoutSession = asyncHandler(async (req, res, next) => {
         shipping_rate_data: {
           type: "fixed_amount",
           fixed_amount: {
-            amount: 1500,
+            amount: 2000,
             currency: "usd",
           },
-          display_name: "Next day air",
+          display_name: "Express Delivery",
           delivery_estimate: {
             minimum: {
               unit: "business_day",
@@ -92,7 +89,7 @@ exports.createCheckoutSession = asyncHandler(async (req, res, next) => {
             },
             maximum: {
               unit: "business_day",
-              value: 1,
+              value: 2,
             },
           },
         },
@@ -102,11 +99,6 @@ exports.createCheckoutSession = asyncHandler(async (req, res, next) => {
       enabled: true,
     },
     line_items,
-    // discounts: [
-    //   {
-    //     coupon,
-    //   },
-    // ],
     mode: "payment",
     customer: customer.id,
     success_url: `${process.env.CLIENT_URL}/checkout/order-completed`,
@@ -118,24 +110,46 @@ exports.createCheckoutSession = asyncHandler(async (req, res, next) => {
 
 // Create order function
 const createOrder = async (customer, data) => {
-  const Items = JSON.parse(customer.metadata.cart);
-  console.log({ customer, data });
-
   const newOrder = new Order({
     username: data.customer_details.name,
     phone: data.customer_details.phone,
     user: customer.metadata.userId,
-    products: Items,
-    address: data.customer_details.city + " - " + data.customer_details.country,
-    total_price: roundNumber(
-      data.amount_total * ((100 - customer.metadata.discount) / 100)
-    ),
+    address:
+      data.customer_details.address.city +
+      " - " +
+      data.customer_details.address.country,
+    total_price: roundNumber(data.amount_total),
     status: data.payment_status,
   });
 
   try {
     const savedOrder = await newOrder.save();
-    console.log("Processed Order:", savedOrder);
+    await createOrderDetails(customer, data, savedOrder._id);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+// Create order function
+const createOrderDetails = async (customer, data, orderId) => {
+  const Items = JSON.parse(customer.metadata.cart);
+
+  const newOrderDetails = new OrderDetail({
+    products: Items,
+    shippingAddress: {
+      fullName: data.customer_details.name,
+      address:
+        data.customer_details.address.city +
+        " - " +
+        data.customer_details.address.country,
+      cellPhone: data.customer_details.phone,
+    },
+    order: orderId,
+  });
+
+  try {
+    const savedOrderDetails = await newOrderDetails.save();
+    console.log("Processed savedOrderDetails:", savedOrderDetails);
   } catch (err) {
     console.log(err);
   }

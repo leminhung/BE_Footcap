@@ -29,6 +29,7 @@ exports.apiEnum = {
   API_UPDATE_ORDER: "/order/:orderId",
   API_GET_ORDER: "/order/:orderId",
   API_GET_ORDERS: "/order",
+  API_GET_USER_ORDERS: "/:userId/order",
   API_DELETE_ORDER: "/order/:orderId",
   API_ORDER_GET_DETAILS: "/order-detail",
   API_ORDER_DETAILS_GET_PRODUCTS: "/order-detail/products",

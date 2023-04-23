@@ -12,6 +12,7 @@ const {
   reduceQuantityByOne,
   removeOneProduct,
 } = require("../utils/cookieAction");
+const { Promise } = require("mongoose");
 
 // @desc      Get products from cart (use cookie when not loggined user)
 // @route     GET /api/v1/order/products
@@ -81,6 +82,23 @@ exports.getOrder = asyncHandler(async (req, res, next) => {
 exports.getOrders = asyncHandler(async (req, res, next) => {
   const orders = await Order.find().populate("user");
   res.status(codeEnum.SUCCESS).json({ data: orders });
+});
+
+const getOrderDetails = async (orderId) => {
+  return await OrderDetail.find({ order: orderId }).populate("order");
+};
+
+// @desc      Get orders
+// @route     GET /api/v1/:userId/order
+// @access    Private(For User Who ordered)
+exports.getOrdersByUser = asyncHandler(async (req, res, next) => {
+  const orders = await Order.find({ user: req.params.userId });
+
+  let orderDetails = await Promise.all(
+    orders.map((o) => getOrderDetails(o._id))
+  );
+
+  res.status(codeEnum.SUCCESS).json({ data: orderDetails.flat() });
 });
 
 // @desc      Delete order
