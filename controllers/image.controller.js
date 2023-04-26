@@ -28,6 +28,19 @@ exports.getImage = asyncHandler(async (req, res, next) => {
   res.status(codeEnum.SUCCESS).json({ data: image });
 });
 
+// @desc      Get images for product
+// @route     GET /api/v1/:productId/images
+// @access    Private(User login)
+exports.getImagesForProduct = asyncHandler(async (req, res, next) => {
+  const image = await Assets.find({ product: req.params.productId });
+
+  if (!image) {
+    return next(new ErrorResponse(msgEnum.NOT_FOUND, codeEnum.NOT_FOUND));
+  }
+
+  res.status(codeEnum.SUCCESS).json({ data: image });
+});
+
 // @desc      Delete image
 // @route     DELETE /api/v1/images/:imageId
 // @access    Private(Admin)

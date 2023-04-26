@@ -1,5 +1,6 @@
 const express = require("express");
 const Stripe = require("stripe");
+const CryptoJS = require("crypto-js");
 
 const Order = require("../models/Order.model");
 const asyncHandler = require("../middleware/async");
@@ -12,13 +13,19 @@ const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
 const default_img =
   "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/d44fa06fc83f4644b7e8acbc01160e1b_9366/NMD_R1_Primeblue_Shoes_Black_GZ9258_01_standard.jpg";
 
+// Encrypt the serialized object using AES encryption
+const key = "my secret key";
+
+let cartItems;
+
 exports.createCheckoutSession = asyncHandler(async (req, res, next) => {
-  const cartItems = req.body.cartItems.map((item) => {
+  cartItems = req.body.cartItems.map((item) => {
     return {
       product: item.product,
       quantity: item.quantity,
       price: item.price,
       name: item.name,
+      image: item.image,
     };
   });
 
@@ -26,7 +33,6 @@ exports.createCheckoutSession = asyncHandler(async (req, res, next) => {
     metadata: {
       userId: req.body.userId,
       discount: req.body.discount,
-      cart: JSON.stringify(cartItems),
     },
   });
 
@@ -132,10 +138,9 @@ const createOrder = async (customer, data) => {
 
 // Create order function
 const createOrderDetails = async (customer, data, orderId) => {
-  const Items = JSON.parse(customer.metadata.cart);
-
+  console.log("cartItems--", cartItems);
   const newOrderDetails = new OrderDetail({
-    products: Items,
+    products: cartItems,
     shippingAddress: {
       fullName: data.customer_details.name,
       address:

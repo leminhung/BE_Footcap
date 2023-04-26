@@ -41,6 +41,7 @@ exports.apiEnum = {
   API_UPDATE_CATEGORY: "/categories/:categoryId",
   API_UPLOAD_CATEGORY_PHOTO: "/categories/:categoryId/photo",
   API_GET_IMAGES: "/images",
+  API_GET_PRODUCT_IMAGES: "/:productId/images",
   API_GET_IMAGE: "/images/:imageId",
   API_DELETE_IMAGE: "/images/:imageId",
   API_UPDATE_IMAGE: "/images/:imageId",

@@ -5,7 +5,8 @@ const {
   getAllImages,
   getImage,
   deleteImage,
-} = require("../controllers/image.controller ");
+  getImagesForProduct,
+} = require("../controllers/image.controller");
 
 const Assets = require("../models/Assets.model");
 
@@ -21,6 +22,8 @@ router.get(
   advancedResults(Assets, ""),
   getAllImages
 );
+
+router.get(apiEnum.API_GET_PRODUCT_IMAGES, getImagesForProduct);
 
 router.get(apiEnum.API_GET_IMAGE, getImage);
 
