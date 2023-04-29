@@ -15,31 +15,29 @@ const productSchema = new mongoose.Schema(
     status: { type: Number, required: true },
     size: {
       type: [String],
-      enum: ["XL", "L", "M", "S", "XXL", "3XL"],
+      enum: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
       required: true,
     },
     slug: String,
     description: String,
     rating: {
       type: Number,
-      required: true,
       default: 0,
     },
     numReviews: {
       type: Number,
-      required: true,
       default: 0,
     },
     discount: { type: Number, min: [0, "Discount must be at least 0"] },
     quantity: {
       type: Number,
-      required: true,
+      default: 0,
       min: [0, "Quantity must be at least 0"],
     },
     sold: { type: Number, default: 0 },
-    featured: { type: Number, required: true },
+    featured: { type: Number, default: 1, required: true },
     category: {
-      type: mongoose.Schema.ObjectId,
+      type: String,
       ref: "Category",
       required: true,
     },
@@ -47,6 +45,7 @@ const productSchema = new mongoose.Schema(
   {
     toJSON: { virtuals: true },
     toObject: { virtuals: true },
+    timestamps: true,
   }
 );
 

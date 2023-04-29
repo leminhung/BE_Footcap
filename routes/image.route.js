@@ -6,6 +6,7 @@ const {
   getImage,
   deleteImage,
   getImagesForProduct,
+  updateImageProfile,
 } = require("../controllers/image.controller");
 
 const Assets = require("../models/Assets.model");
@@ -32,6 +33,13 @@ router.delete(
   protect,
   authorize("admin"),
   deleteImage
+);
+
+router.put(
+  apiEnum.API_UPDATE_IMAGE_PROFILE,
+  protect,
+  authorize("admin"),
+  updateImageProfile
 );
 
 module.exports = router;

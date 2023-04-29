@@ -50,7 +50,7 @@ router.put(
   updateProduct
 );
 
-router.put(
+router.post(
   apiEnum.API_UPLOAD_PRODUCT_PHOTO,
   protect,
   authorize("admin"),

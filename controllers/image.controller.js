@@ -55,3 +55,20 @@ exports.deleteImage = asyncHandler(async (req, res, next) => {
 
   res.status(codeEnum.SUCCESS).json({ data: image });
 });
+
+// @desc      Update image profile
+// @route     UPDATE /api/v1/images/:productId
+// @access    Private(Admin)
+exports.updateImageProfile = asyncHandler(async (req, res, next) => {
+  const image = await Assets.findOne({ product: req.params.productId });
+
+  if (!image) {
+    return next(new ErrorResponse(msgEnum.NOT_FOUND, codeEnum.NOT_FOUND));
+  }
+
+  image.filename = req.body.filename;
+
+  await image.save();
+
+  res.status(codeEnum.SUCCESS).json({ data: image });
+});

@@ -1,3 +1,4 @@
+const mongoose = require("mongoose");
 const Product = require("../models/Product.model");
 const Assets = require("../models/Assets.model");
 
@@ -54,7 +55,7 @@ exports.deleteProduct = asyncHandler(async (req, res, next) => {
     return next(new ErrorResponse(msgEnum.NOT_FOUND, codeEnum.NOT_FOUND));
   }
 
-  product.remove();
+  await product.remove();
 
   res.status(codeEnum.SUCCESS).json({ data: {} });
 });
@@ -79,6 +80,48 @@ exports.updateProduct = asyncHandler(async (req, res, next) => {
   });
 });
 
+// // @desc      Upload photo for product
+// // @route     PUT /api/v1/products/:productId/photo
+// // @access    Private
+// exports.productPhotoUpload = asyncHandler(async (req, res, next) => {
+//   const product = await Product.findById(req.params.productId);
+
+//   if (!product) {
+//     return next(new ErrorResponse(msgEnum.DATA_NOT_FOUND, codeEnum.NOT_FOUND));
+//   }
+
+//   if (!req.files) {
+//     return next(new ErrorResponse(msgEnum.UPLOAD_FAIL, codeEnum.BAD_REQUEST));
+//   }
+
+//   const file = req.files.photo;
+
+//   if (!file.mimetype.startsWith("image")) {
+//     return next(
+//       new ErrorResponse(msgEnum.WRONG_FILE_TYPE, codeEnum.BAD_REQUEST)
+//     );
+//   }
+
+//   if (file.size > process.env.MAX_FILE_UPLOAD) {
+//     return next(
+//       new ErrorResponse(msgEnum.FILE_SIZE_OVER, codeEnum.BAD_REQUEST)
+//     );
+//   }
+
+//   cloudinary.uploader.upload(file.tempFilePath, async (err, result) => {
+//     await Image.create({
+//       path: result.url,
+//       product: req.params.productId,
+//     });
+//     res.status(codeEnum.SUCCESS).json({ msg: msgEnum.UPLOAD_SUCCESS });
+//   });
+// });
+
+const uploadImage = async (body) => {
+  const image = await Assets.create(body);
+  return image;
+};
+
 // @desc      Upload photo for product
 // @route     PUT /api/v1/products/:productId/photo
 // @access    Private
@@ -89,30 +132,14 @@ exports.productPhotoUpload = asyncHandler(async (req, res, next) => {
     return next(new ErrorResponse(msgEnum.DATA_NOT_FOUND, codeEnum.NOT_FOUND));
   }
 
-  if (!req.files) {
-    return next(new ErrorResponse(msgEnum.UPLOAD_FAIL, codeEnum.BAD_REQUEST));
-  }
+  const images = await Promise.all(
+    req.body.paths.map((filename) =>
+      uploadImage({ product: product._id, filename })
+    )
+  );
 
-  const file = req.files.photo;
-
-  if (!file.mimetype.startsWith("image")) {
-    return next(
-      new ErrorResponse(msgEnum.WRONG_FILE_TYPE, codeEnum.BAD_REQUEST)
-    );
-  }
-
-  if (file.size > process.env.MAX_FILE_UPLOAD) {
-    return next(
-      new ErrorResponse(msgEnum.FILE_SIZE_OVER, codeEnum.BAD_REQUEST)
-    );
-  }
-
-  cloudinary.uploader.upload(file.tempFilePath, async (err, result) => {
-    await Image.create({
-      path: result.url,
-      product: req.params.productId,
-    });
-    res.status(codeEnum.SUCCESS).json({ msg: msgEnum.UPLOAD_SUCCESS });
+  res.status(codeEnum.SUCCESS).json({
+    data: images,
   });
 });
 
