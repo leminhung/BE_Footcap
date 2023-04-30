@@ -7,19 +7,19 @@ const categorySchema = new mongoose.Schema(
     slug: String,
     description: {
       type: String,
-      required: [true, "Bạn chưa nhập mô tả"],
+      default: "Hello",
     },
     // Trạng thái hoạt động (1 - Active, 0 - Inactive)
     status: {
       type: Number,
-      required: [true, "Bạn chưa nhập trạng thái hoạt động"],
+      default: 1,
     },
     thumbnail: {
       type: String,
-      default: "thumbnail.jpg",
+      default: "",
     },
   },
-  { toJSON: { virtuals: true } }
+  { toJSON: { virtuals: true }, timestamps: true }
 );
 
 categorySchema.pre("save", function (next) {
@@ -36,8 +36,8 @@ categorySchema.pre("remove", async function (next) {
 
   const prodIds = products.map((p) => p._id.toString());
 
-  await this.model("Comment").deleteMany({ product: { $in: prodIds } });
-  await this.modeel("Product").deleteMany({ category: this._id });
+  // await this.model("Comment").deleteMany({ product: { $in: prodIds } });
+  // await this.model("Product").deleteMany({ category: this._id });
   next();
   l("Image").deleteMany({ product: { $in: prodIds } });
   await this.mod;
