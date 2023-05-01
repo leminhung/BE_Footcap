@@ -6,7 +6,7 @@ exports.apiEnum = {
   API_UPDATE_USER_BY_ADMIN: "/auth/updateuserdetails/:userId",
   API_DELETE_USER: "/auth/deleteuser/:userId",
   API_FORGOT_PASSWORD: "/auth/forget-password",
-  API_RESET_PASSWORD: "/auth/reset-password/:reset-token",
+  API_RESET_PASSWORD: "/auth/reset-password",
   API_GET_TOKEN: "/auth/token",
   API_CHECK_STUDENT: "/check",
   API_UPDATE_PASSWORD: "/auth/update-password",

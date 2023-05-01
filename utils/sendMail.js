@@ -10,14 +10,13 @@ const sendMail = async (options) => {
   });
 
   const message = {
-    from: `Shop thời trang - Tony4Men`,
+    from: `Sports store - Tony4Men`,
     to: options.email,
     subject: options.subject,
-    text: options.message,
+    html: options.message,
   };
 
   const info = await transporter.sendMail(message);
-
   return info;
 };
 

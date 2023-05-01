@@ -72,6 +72,7 @@ exports.checkValidCoupon = asyncHandler(async (req, res, next) => {
 
   res.status(codeEnum.SUCCESS).json({
     data: {
+      coupon_code: coupon.coupon_code,
       discount: coupon.coupon_spend,
     },
   });

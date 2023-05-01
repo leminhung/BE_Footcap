@@ -31,7 +31,6 @@ exports.createCheckoutSession = asyncHandler(async (req, res, next) => {
   const customer = await stripe.customers.create({
     metadata: {
       userId: req.body.userId,
-      discount: req.body.discount,
     },
   });
 
@@ -116,7 +115,7 @@ exports.createCheckoutSession = asyncHandler(async (req, res, next) => {
     },
     discounts: [
       {
-        coupon: "AABCCCC",
+        coupon: req.body.coupon.code,
       },
     ],
     line_items,

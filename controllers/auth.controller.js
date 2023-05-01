@@ -73,7 +73,7 @@ exports.signOut = asyncHandler(async (req, res, next) => {
 });
 
 // @desc      Forgot password
-// @route     GET /api/v1/auth/forgot
+// @route     POST /api/v1/auth/forget-password
 // @access    Public
 exports.forgot = asyncHandler(async (req, res, next) => {
   const { email } = req.body;
@@ -93,16 +93,15 @@ exports.forgot = asyncHandler(async (req, res, next) => {
   await user.save({ validateBeforeSave: false });
 
   // Create reset url
-  const resetUrl = `${req.protocol}://${req.get(
-    "host"
-  )}/api/v1/auth/resetpassword/${resetToken}`;
+  const resetUrl = `http://localhost:3000/reset-password`;
 
-  const message = `Vui lòng click vào đây ${resetUrl} để cập nhật lại mật khẩu. 
-      Link tồn tại trong ${process.env.RESET_TOKEN_EXPIRE} phút.`;
+  const message = `<p>Please click here ${resetUrl} <br />
+    And use <strong>${resetToken}</strong> to update new password. <br />
+    Link exists in ${process.env.RESET_TOKEN_EXPIRE} mins.</p>`;
 
   const options = {
     email: user.email,
-    subject: "Quên mật khẩu ?",
+    subject: "Forgot password ?",
     message,
   };
 
@@ -114,18 +113,20 @@ exports.forgot = asyncHandler(async (req, res, next) => {
 });
 
 // @desc      Reset password
-// @route     GET /api/v1/auth/resetpassword
+// @route     PUT /api/v1/auth/resetpassword
 // @access    Public
 exports.resetPassword = asyncHandler(async (req, res, next) => {
   const resetPasswordToken = crypto
     .createHash("sha256")
-    .update(req.params.reset - token)
+    .update(req.body.resettoken)
     .digest("hex");
 
   const user = await User.findOne({
     resetPasswordToken,
     resetPasswordExpire: { $gt: Date.now() },
   });
+
+  console.log("user-", user);
 
   if (!user) {
     return next(new ErrorResponse(TOKEN_INVALID, 400));
