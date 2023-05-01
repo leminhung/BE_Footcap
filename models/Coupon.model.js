@@ -7,13 +7,8 @@ const couponSchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
-  // Loại giảm giá, có thể là giảm phần trăm hoặc một số tiền cố định
-  coupon_type: {
-    type: [String],
-    enum: ["percent", "fixed_amount"],
-  },
 
-  // 	Giá trị giảm giá, nếu coupon_type là 'percent' thì giá trị này sẽ là phần trăm giảm, còn nếu coupon_type là 'fixed_amount' thì giá trị này sẽ là số tiền cố định giảm
+  // 	Giá trị này sẽ là số tiền đơn hàng đủ điều kiện giảm
   coupon_value: {
     type: Number,
   },
@@ -28,13 +23,8 @@ const couponSchema = new mongoose.Schema({
     type: Date,
   },
 
-  // Số tiền tối thiểu để sử dụng coupon
-  coupon_min_spend: {
-    type: Number,
-  },
-
-  //Số tiền tối đa được giảm giá khi sử dụng coupon
-  coupon_max_spend: {
+  //Số tiền được giảm giá khi sử dụng coupon
+  coupon_spend: {
     type: Number,
   },
 
@@ -48,13 +38,17 @@ const couponSchema = new mongoose.Schema({
   coupon_uses_per_coupon: {
     type: Number,
   },
+
+  // Đếm số lần sử dụng coupon
+  coupon_count_per_coupon: {
+    type: Number,
+    default: 0,
+  },
 });
 
-// orderSchema.pre("save", async function (next) {
-//   this.status = true;
-//   next();
-// });
+couponSchema.pre("save", function (next) {
+  this.coupon_count_per_coupon += 1;
+  return next();
+});
 
-const Coupon = mongoose.model("Coupon", couponSchema);
-
-module.exports = Coupon;
+module.exports = mongoose.model("Coupon", couponSchema);

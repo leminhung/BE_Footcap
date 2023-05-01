@@ -13,9 +13,6 @@ const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
 const default_img =
   "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/d44fa06fc83f4644b7e8acbc01160e1b_9366/NMD_R1_Primeblue_Shoes_Black_GZ9258_01_standard.jpg";
 
-// Encrypt the serialized object using AES encryption
-const key = "my secret key";
-
 let cartItems;
 
 exports.createCheckoutSession = asyncHandler(async (req, res, next) => {
@@ -26,6 +23,8 @@ exports.createCheckoutSession = asyncHandler(async (req, res, next) => {
       price: item.price,
       name: item.name,
       image: item.image,
+      size: item.size,
+      color: item.color,
     };
   });
 
@@ -47,12 +46,23 @@ exports.createCheckoutSession = asyncHandler(async (req, res, next) => {
             id: item.product,
           },
         },
-        unit_amount:
-          roundNumber(item.price * ((100 - req.body.discount) / 100)) * 100,
+        unit_amount: roundNumber(item.price * 100),
       },
       quantity: item.quantity,
     };
   });
+
+  // await stripe.coupons.create(
+  //   {
+  //     amount_off: req.body.discount * 100,
+  //     duration: "once",
+  //     id: "AABCCCC",
+  //     currency: "usd",
+  //   },
+  //   function (err, coupon) {
+  //     console.log({ err, coupon });
+  //   }
+  // );
 
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
@@ -104,6 +114,11 @@ exports.createCheckoutSession = asyncHandler(async (req, res, next) => {
     phone_number_collection: {
       enabled: true,
     },
+    discounts: [
+      {
+        coupon: "AABCCCC",
+      },
+    ],
     line_items,
     mode: "payment",
     customer: customer.id,

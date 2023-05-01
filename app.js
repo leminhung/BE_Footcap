@@ -15,6 +15,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const connectDB = require("./config/db");
+console.log(new Date("2023-05-01") > Date.now());
 
 app.use(cors());
 

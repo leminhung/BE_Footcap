@@ -8,9 +8,6 @@ const connectDB = async () => {
       (err, db) => {
         if (err) throw err;
         console.log(`MongoDb connected`.cyan.bold);
-        db.collection("products").createIndex({
-          title: "text",
-        });
       },
       {
         useNewUrlParser: true,
