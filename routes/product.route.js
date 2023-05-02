@@ -18,13 +18,15 @@ const { protect, authorize } = require("../middleware/auth");
 
 const { apiEnum } = require("../enum/api.enum");
 
+router.get(
+  apiEnum.API_GET_RELATED_PRODUCTS,
+  advancedResults(Product, { path: "assets", select: "filename" }),
+  listRelated
+);
 router.get(apiEnum.API_GET_PRODUCT, getProduct);
-router.get(apiEnum.API_GET_RELATED_PRODUCTS, listRelated);
 
 router.get(
   apiEnum.API_GET_PRODUCTS,
-  // authorize("admin"),
-  // protect,
   advancedResults(Product, { path: "assets", select: "filename" }),
   getAllProducts
 );

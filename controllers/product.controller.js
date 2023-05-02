@@ -1,4 +1,5 @@
-const mongoose = require("mongoose");
+const { ObjectID } = require("mongodb");
+
 const Product = require("../models/Product.model");
 const Assets = require("../models/Assets.model");
 
@@ -8,8 +9,8 @@ const asyncHandler = require("../middleware/async");
 const { codeEnum } = require("../enum/status-code.enum");
 const { msgEnum } = require("../enum/message.enum");
 
-const cloudinary = require("../utils/cloudinaryConfig");
-// const { APIFeatures } = require("../utils/api_features");
+const { APIFeatures } = require("../utils/api_features");
+// const cloudinary = require("../utils/cloudinaryConfig");
 
 // @desc      Get all products
 // @route     GET /api/v1/products
@@ -147,32 +148,5 @@ exports.productPhotoUpload = asyncHandler(async (req, res, next) => {
 // @route     GET /api/v1/products/related
 // @access    Public
 exports.listRelated = asyncHandler(async (req, res, next) => {
-  // console.log(req.query);
-  // const product = await Product.findById(req.query.productId).exec();
-
-  // const total = await Product.find({
-  //   _id: { $ne: product._id },
-  //   category: req.query.cate,
-  // }).exec();
-
-  // const features = new APIFeatures(
-  //   Product.find({
-  //     _id: { $ne: product._id },
-  //     category: req.query.cate,
-  //   }),
-  //   req.query
-  // ).paginating();
-
-  // const products = await features.query;
-  // return res.status(codeEnum.SUCCESS).json({
-  //   data: {
-  //     length: total.length,
-  //     data: products,
-  //   },
-  // });
-  res.status(codeEnum.SUCCESS).json({
-    data: {
-      data: "hello",
-    },
-  });
+  res.status(codeEnum.SUCCESS).json(res.advancedResults);
 });

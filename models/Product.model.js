@@ -12,7 +12,7 @@ const productSchema = new mongoose.Schema(
     },
     code: { type: String, required: true },
     color: { type: [String], required: true },
-    status: { type: Number, required: true },
+    status: { type: String, required: true },
     size: {
       type: [String],
       enum: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -37,7 +37,7 @@ const productSchema = new mongoose.Schema(
     sold: { type: Number, default: 0 },
     featured: { type: Number, default: 1, required: true },
     category: {
-      type: String,
+      type: mongoose.Schema.Types.ObjectId,
       ref: "Category",
       required: true,
     },
