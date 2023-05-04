@@ -18,8 +18,6 @@ const orderDetailSchema = new mongoose.Schema(
       ref: "Product",
       required: true,
     },
-    isPaid: { type: Boolean, default: false },
-    paidAt: { type: Date },
     isDelivered: { type: Boolean, default: false },
     deliveredAt: { type: Date },
   },

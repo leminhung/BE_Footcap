@@ -10,7 +10,6 @@ const productSchema = new mongoose.Schema(
       required: true,
       min: [0, "Price must be at least 0"],
     },
-    code: { type: String, required: true },
     color: { type: [String], required: true },
     status: { type: String, required: true },
     size: {
@@ -20,21 +19,17 @@ const productSchema = new mongoose.Schema(
     },
     slug: String,
     description: String,
-    rating: {
-      type: Number,
-      default: 0,
-    },
+    long_description: String,
     numReviews: {
       type: Number,
       default: 0,
     },
-    discount: { type: Number, min: [0, "Discount must be at least 0"] },
+    quantity_purchased: { type: Number },
     quantity: {
       type: Number,
       default: 0,
       min: [0, "Quantity must be at least 0"],
     },
-    sold: { type: Number, default: 0 },
     featured: { type: Number, default: 1, required: true },
     category: {
       type: mongoose.Schema.Types.ObjectId,

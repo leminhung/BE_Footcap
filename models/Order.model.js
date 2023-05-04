@@ -24,9 +24,6 @@ const orderSchema = new mongoose.Schema(
     coupon_id: {
       type: Number,
     },
-    affiliate_id: {
-      type: Number,
-    },
     note: {
       type: String,
     },
