@@ -32,6 +32,7 @@ const couponSchema = new mongoose.Schema({
   coupon_status: {
     type: [String],
     enum: ["active", "expired", "disabled"],
+    default: ["active"],
   },
 
   // Số lần sử dụng coupon tối đa cho chính coupon đó
