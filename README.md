@@ -1,26 +1,26 @@
-# backend-tony-4-men
+# Footcap
 
 ### Cài đặt
 
-
 ```sh
-$ cd backend-tony-4-men
+$ cd BE_SportStore
 $ npm install
 $ npm start
 ```
 
 ### Tính năng
-- Đăng ký tài khoản
-- Đăng nhập bằng token.
+
+- Đăng nhập, đăng ký tài khoản
 - Quên mật khẩu ( gửi về mail).
 - Cập nhật mật khẩu.
-- Thêm sản phẩm theo thư mục.
+- Thêm sản phẩm theo tên.
+- Lọc sản phẩm theo danh mục, giá, màu sắc, size
 - Upload ảnh cho mỗi sản phẩm
 - Phân quyền Admin, User.
 - GET sản phẩm, phân trang.
-- Thêm, Sửa, Xóa sản phẩm, thư mục.
+- Thêm, Sửa, Xóa sản phẩm, thư mục, mã giảm giá,...
 - Giỏ hàng
-- Comment cho mỗi sản phẩm
+- Add cho mỗi sản phẩm
+- Chatbot Facebook Messager hỗ trợ mua hàng
+- Thanh toán trực tuyến với Stripe
 - ...
-- --
-FB: https://www.facebook.com/leminh.hung.9256
