@@ -1,8 +1,8 @@
-const express = require("express");
 const Stripe = require("stripe");
-const CryptoJS = require("crypto-js");
+const _ = require("lodash");
 
 const Order = require("../models/Order.model");
+const Product = require("../models/Product.model");
 const asyncHandler = require("../middleware/async");
 const { roundNumber } = require("../utils/roundNumber");
 const OrderDetail = require("../models/OrderDetail.model");
@@ -14,6 +14,19 @@ const default_img =
   "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/d44fa06fc83f4644b7e8acbc01160e1b_9366/NMD_R1_Primeblue_Shoes_Black_GZ9258_01_standard.jpg";
 
 let cartItems;
+
+// ------handmade discount------ :vv
+// stripe.coupons.create(
+//   {
+//     amount_off: 15 * 100,
+//     duration: "once",
+//     id: "ABCABC",
+//     currency: "usd",
+//   },
+//   function (err, coupon) {
+//     console.log({ err, coupon });
+//   }
+// );
 
 exports.createCheckoutSession = asyncHandler(async (req, res, next) => {
   cartItems = req.body.cartItems.map((item) => {
@@ -50,18 +63,6 @@ exports.createCheckoutSession = asyncHandler(async (req, res, next) => {
       quantity: item.quantity,
     };
   });
-
-  // await stripe.coupons.create(
-  //   {
-  //     amount_off: req.body.discount * 100,
-  //     duration: "once",
-  //     id: "AABCCCC",
-  //     currency: "usd",
-  //   },
-  //   function (err, coupon) {
-  //     console.log({ err, coupon });
-  //   }
-  // );
 
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
@@ -113,11 +114,13 @@ exports.createCheckoutSession = asyncHandler(async (req, res, next) => {
     phone_number_collection: {
       enabled: true,
     },
-    discounts: [
-      {
-        coupon: req.body.coupon.code,
-      },
-    ],
+    discounts: req.body.coupon.code
+      ? [
+          {
+            coupon: req.body.coupon.code,
+          },
+        ]
+      : undefined,
     line_items,
     mode: "payment",
     customer: customer.id,
@@ -150,9 +153,31 @@ const createOrder = async (customer, data) => {
   }
 };
 
+const updateQuantityPurchased = async (productId, purchared) => {
+  return await Product.findByIdAndUpdate(productId, {
+    $set: { quantity_purchased: purchared },
+  });
+};
+
+// Update product quantity
+const updateProducts = async () => {
+  const groupedProducts = _.groupBy(cartItems, "product");
+
+  const quantitiesById = _.mapValues(groupedProducts, (group) => {
+    return _.sumBy(group, "quantity");
+  });
+
+  const uniqueProducts = _.uniqBy(cartItems, "product");
+
+  return await Promise.all(
+    uniqueProducts.map((p) =>
+      updateQuantityPurchased(p.product, quantitiesById[p.product])
+    )
+  );
+};
+
 // Create order function
 const createOrderDetails = async (customer, data, orderId) => {
-  console.log("cartItems--", cartItems);
   const newOrderDetails = new OrderDetail({
     products: cartItems,
     shippingAddress: {
@@ -168,6 +193,7 @@ const createOrderDetails = async (customer, data, orderId) => {
 
   try {
     const savedOrderDetails = await newOrderDetails.save();
+    await updateProducts();
     console.log("Processed savedOrderDetails:", savedOrderDetails);
   } catch (err) {
     console.log(err);

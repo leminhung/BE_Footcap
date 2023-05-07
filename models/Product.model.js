@@ -24,7 +24,7 @@ const productSchema = new mongoose.Schema(
       type: Number,
       default: 0,
     },
-    quantity_purchased: { type: Number },
+    quantity_purchased: { type: Number, default: 0 },
     quantity: {
       type: Number,
       default: 0,
