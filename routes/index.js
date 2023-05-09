@@ -7,6 +7,7 @@ const imageRouter = require("./image.route");
 const commentRouter = require("./comment.route");
 const stripeRouter = require("./stripe.route");
 const couponRouter = require("./coupon.route");
+const reviewRouter = require("./review.route");
 
 const routers = [
   authRouter,
@@ -18,6 +19,7 @@ const routers = [
   commentRouter,
   stripeRouter,
   couponRouter,
+  reviewRouter,
 ];
 
 module.exports = (app) => {
