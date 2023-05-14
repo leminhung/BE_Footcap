@@ -104,7 +104,7 @@ exports.getOrdersByUser = asyncHandler(async (req, res, next) => {
 // @route     GET /api/v1/phone/order
 // @access    Private(For User Who ordered)
 exports.getOrdersByPhone = asyncHandler(async (req, res, next) => {
-  console.log(req.body.phone);
+  console.log("body--", req.body);
   const orders = await Order.find({ phone: req.body.phone }).sort({
     createdAt: -1,
   });
