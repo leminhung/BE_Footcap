@@ -8,7 +8,7 @@ const {
   getOrder,
   deleteOrder,
   getOrders,
-  getCart,
+  getOrdersByPhone,
   addProductToCart,
   postCartDeleteProduct,
   postCartReduceProductByOne,
@@ -17,10 +17,20 @@ const {
 
 const { apiEnum } = require("../enum/api.enum");
 const { protect, authorize } = require("../middleware/auth");
+const Order = require("../models/Order.model");
+const advancedResults = require("../middleware/advancedResults");
+
+router.get(apiEnum.API_GET_ORDER_BY_PHONE, getOrdersByPhone);
 
 router
   .get(apiEnum.API_ORDER_GET_PRODUCTS, getProducts)
-  .get(apiEnum.API_GET_ORDERS, protect, authorize("admin"), getOrders)
+  .get(
+    apiEnum.API_GET_ORDERS,
+    // protect,
+    // authorize("admin"),
+    advancedResults(Order, { path: "user" }),
+    getOrders
+  )
   .get(
     apiEnum.API_GET_USER_ORDERS,
     // protect,

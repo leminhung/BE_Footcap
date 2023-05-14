@@ -80,8 +80,7 @@ exports.getOrder = asyncHandler(async (req, res, next) => {
 // @route     GET /api/v1/order
 // @access    Private(Admin)
 exports.getOrders = asyncHandler(async (req, res, next) => {
-  const orders = await Order.find().populate("user");
-  res.status(codeEnum.SUCCESS).json({ data: orders });
+  res.status(codeEnum.SUCCESS).json(res.advancedResults);
 });
 
 const getOrderDetails = async (orderId) => {
@@ -99,6 +98,17 @@ exports.getOrdersByUser = asyncHandler(async (req, res, next) => {
   );
 
   res.status(codeEnum.SUCCESS).json({ data: orderDetails.flat() });
+});
+
+// @desc      Get nearest order by phone number
+// @route     GET /api/v1/phone/order
+// @access    Private(For User Who ordered)
+exports.getOrdersByPhone = asyncHandler(async (req, res, next) => {
+  console.log(req.body.phone);
+  const orders = await Order.find({ phone: req.body.phone }).sort({
+    createdAt: -1,
+  });
+  res.status(codeEnum.SUCCESS).json({ order: orders[0] });
 });
 
 // @desc      Delete order

@@ -15,15 +15,11 @@ const { protect, authorize } = require("../middleware/auth");
 const { apiEnum } = require("../enum/api.enum");
 const Review = require("../models/Review.model");
 
-console.log("hellp");
-
-router.post(apiEnum.API_CREATE_REVIEW, protect, createReview);
-
 router.get(
   apiEnum.API_GET_REVIEWS,
   protect,
-  authorize("admin"),
-  advancedResults(Review),
+  // authorize("admin"),
+  // advancedResults(Review),
   getAllReviews
 );
 
@@ -48,4 +44,5 @@ router.put(
   updateReview
 );
 
+router.post(apiEnum.API_CREATE_REVIEW, createReview);
 module.exports = router;

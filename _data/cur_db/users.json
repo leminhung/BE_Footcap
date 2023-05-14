@@ -1,202 +1,109 @@
-[{
-  "_id": {
-    "$oid": "62df970e8b2f278bfcef877a"
+[
+  {
+    "_id": {
+      "$oid": "64309113f367044f0591fddb"
+    },
+    "name": "minhhung",
+    "avatar": "/images/users/hungdz.PNG",
+    "email": "leminhhungtabletennis@gmail.com",
+    "password": "$2a$10$jCxULVjIjzsl0UkZ9DooluOhgHkxVQQcbr6cyG9Ehfu.SzYYiM7kW",
+    "role": "user",
+    "createdAt": {
+      "$date": "2023-04-07T21:54:27.351Z"
+    },
+    "updatedAt": {
+      "$date": "2023-05-01T17:06:36.559Z"
+    },
+    "__v": 0,
+    "date": "2001-02-01"
   },
-  "name": "Nhat admin 1",
-  "email": "nhat@gmail.com",
-  "password": "$2a$10$tT/m7DuTxdxG3j3SIC1n2OQFoDhTut3BLqbtekvVba6GbcNLIFVHW",
-  "role": "admin",
-  "createdAt": {
-    "$date": "2022-07-26T07:26:06.149Z"
+  {
+    "_id": {
+      "$oid": "643092bb596962cb6c782419"
+    },
+    "name": "Min Hung",
+    "avatar": "/images/users/hungdz2.PNG",
+    "email": "leminhhungtabletennis1@gmail.com",
+    "password": "$2a$10$KHP1KfDdxcOaDUXemiaLTufoBxIV2pOPFGupSAo.LIjRHLMdD/3du",
+    "role": "user",
+    "createdAt": {
+      "$date": "2023-04-07T22:01:31.145Z"
+    },
+    "updatedAt": {
+      "$date": "2023-04-07T22:01:31.145Z"
+    },
+    "__v": 0
   },
-  "updatedAt": {
-    "$date": "2022-08-24T01:07:26.865Z"
+  {
+    "_id": {
+      "$oid": "6440227954f0ad6871866136"
+    },
+    "name": "Hung Le",
+    "date": "2001-02-01",
+    "avatar": "/images/users/hungdz4.PNG",
+    "email": "test@gmail.com",
+    "password": "$2a$10$1HxabVJC0TQ9QCHOOUUo8uJCF8arpLdBgtEqscY5mcCYNkIY5cCNO",
+    "role": "user",
+    "createdAt": {
+      "$date": "2023-04-19T17:18:49.100Z"
+    },
+    "updatedAt": {
+      "$date": "2023-04-30T04:28:21.028Z"
+    },
+    "__v": 0
   },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "62dfbcc45bc219273d7be74f"
+  {
+    "_id": {
+      "$oid": "644800d0e638a3292511e307"
+    },
+    "name": "Test 6",
+    "date": "2001-02-01",
+    "avatar": "/images/users/hungdz5.PNG",
+    "email": "test123@gmail.com",
+    "password": "$2a$10$132Png/uZrLS4oqcVEq9LOsLml7c2bdTFv7gSbbiEKz1G0RvXf57u",
+    "role": "user",
+    "createdAt": {
+      "$date": "2023-04-25T16:33:20.912Z"
+    },
+    "updatedAt": {
+      "$date": "2023-04-30T04:19:26.951Z"
+    },
+    "__v": 0
   },
-  "name": "huyen",
-  "email": "huyen@gmail.com",
-  "password": "$2a$10$EnodYa/R3JnjdntAsbglduW.CRNaHz2l2YjXmKp85VohNOAMXvQg.",
-  "role": "user",
-  "createdAt": {
-    "$date": "2022-07-26T10:07:00.059Z"
+  {
+    "_id": {
+      "$oid": "64485aea5d6627a7727e56c3"
+    },
+    "name": "Hung",
+    "date": "2001-02-01",
+    "avatar": "/images/users/hungdz6.PNG",
+    "email": "leminhhungtabletennis3@gmail.com",
+    "password": "$2a$10$NT6HIa0RKhMbg8Op/XRxT.1gSa6Os6HbpXDVDHlqTSoEtjX61Ea3e",
+    "role": "user",
+    "createdAt": {
+      "$date": "2023-04-25T22:57:46.343Z"
+    },
+    "updatedAt": {
+      "$date": "2023-04-25T22:57:46.343Z"
+    },
+    "__v": 0
   },
-  "updatedAt": {
-    "$date": "2022-07-26T10:07:00.059Z"
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "62e785a84003b18b9522b737"
-  },
-  "name": "Nguyên Long Nhật",
-  "email": "nhat2@gmail.com",
-  "password": "$2a$10$lfYBNziwnFGypgMWssQYC.TMPxKhcQ2bndL6AMd01ISoceU5v95Su",
-  "role": "user",
-  "createdAt": {
-    "$date": "2022-08-01T07:50:00.049Z"
-  },
-  "updatedAt": {
-    "$date": "2022-08-18T14:16:23.418Z"
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "62ecc3096061a81dba52d646"
-  },
-  "name": "Nhật NL",
-  "email": "nhat3@gmail.com",
-  "password": "$2a$10$xANpLL2yZnW30c3OayF3kunnMuCg0YCiwL0M4K5I/3y4BdM9ZJ3fK",
-  "role": "user",
-  "createdAt": {
-    "$date": "2022-08-05T07:13:13.919Z"
-  },
-  "updatedAt": {
-    "$date": "2022-08-24T01:17:01.335Z"
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "62efcab081b9fe7841c932b8"
-  },
-  "name": "vananh059a",
-  "email": "vananh05a@gmail.com",
-  "password": "$2a$10$LPJbD.H/0qpDXI/B1bfStuSL9ffqtwdb9iUNqmqVbveuwRvehCUlu",
-  "role": "admin",
-  "createdAt": {
-    "$date": "2022-08-07T14:22:40.057Z"
-  },
-  "updatedAt": {
-    "$date": "2022-08-07T14:22:40.057Z"
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "62f06e419917b3bca6a180de"
-  },
-  "name": "Huế",
-  "email": "hue@gmail.com",
-  "password": "$2a$10$WrvJH2fwGRUenYhvyBZgR.w7l5cS0SpCp961cidcHqTnS2Ll./Czi",
-  "role": "user",
-  "createdAt": {
-    "$date": "2022-08-08T02:00:33.193Z"
-  },
-  "updatedAt": {
-    "$date": "2022-08-08T02:00:33.193Z"
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "62f12b9d5fc65b0963b63054"
-  },
-  "name": "Le Minh Hung",
-  "avatar": "/images/hungdz.png",
-  "email": "leminhhungtabletennis@gmail.com",
-  "password": "$2a$10$jEfG7QUf8tVzA1bVUU5zmuHNoMOtI53Cfmua8eB/Yq3u9WE3spvGu",
-  "role": "admin",
-  "createdAt": {
-    "$date": "2022-08-08T15:28:29.946Z"
-  },
-  "updatedAt": {
-    "$date": "2022-08-21T07:37:51.115Z"
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "62f27face1d46a70d5c9255f"
-  },
-  "name": "Văn Anh",
-  "email": "vananh0509a@gmail.com",
-  "password": "$2a$10$2fAX8mLp5IMozPSTFjA4/OMzDsECdis4sHqBTBGPPknx7Txg3ZmQO",
-  "role": "admin",
-  "createdAt": {
-    "$date": "2022-08-09T15:39:24.816Z"
-  },
-  "updatedAt": {
-    "$date": "2022-08-21T08:19:31.169Z"
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "62f93bdfbbd18b6c496c9e3a"
-  },
-  "name": "Nguyễn Thị Huyền",
-  "avatar": "/images/hungdz.png",
-  "email": "huyen62@gmail.com",
-  "password": "$2a$10$CrKdE.TZl3IIMXU6me9OgO8HOrX9CTeMwJj4zk1x9V4cbwj5IkoZ.",
-  "role": "admin",
-  "createdAt": {
-    "$date": "2022-08-14T18:15:59.472Z"
-  },
-  "updatedAt": {
-    "$date": "2022-08-14T18:15:59.472Z"
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "62fa0a6dabf3b37d0b11ccad"
-  },
-  "name": "Tommy Nguyen",
-  "avatar": "/images/hungdz.png",
-  "email": "nhat4@gmail.com",
-  "password": "$2a$10$X/i/q4ueg0JfRdx.fR1Lhuzu2KO35PJv9vl3GVokvBMIPFeCK8XeW",
-  "role": "user",
-  "createdAt": {
-    "$date": "2022-05-15T08:57:17.217Z"
-  },
-  "updatedAt": {
-    "$date": "2022-05-15T08:57:17.217Z"
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6300b183835a87d4730b655c"
-  },
-  "name": "test name",
-  "avatar": "/images/hungdz.png",
-  "email": "test@gmail.com",
-  "password": "$2a$10$dbR0oSyffATthqdWezOPieh66uHrgMsY/nWNuigWL/tHITJR3TvXq",
-  "role": "user",
-  "createdAt": {
-    "$date": "2022-08-20T10:03:47.706Z"
-  },
-  "updatedAt": {
-    "$date": "2022-08-20T10:03:47.706Z"
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "630111fa5591a26c1803cd0b"
-  },
-  "name": "Nguyễn Huyền",
-  "avatar": "/images/hungdz.png",
-  "email": "huyen123@gmail.com",
-  "password": "$2a$10$P8Th4PPh3hO0jRF/vUptEuQV469SeYMogrK5oBkyPpcuvtqvDfS9e",
-  "role": "admin",
-  "createdAt": {
-    "$date": "2022-08-20T16:55:22.175Z"
-  },
-  "updatedAt": {
-    "$date": "2022-08-21T08:15:52.186Z"
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "641b1d219c7f094b9fbaa455"
-  },
-  "name": "le miinh hng",
-  "avatar": "/images/hungdz.png",
-  "email": "leminhhunglmh2001@icloud.com",
-  "password": "$2a$10$lK.Hmjm/9vsFHAtlp65QXebzWj8VD33Ge68XEM.C.RhxlMR4SaiPq",
-  "role": "user",
-  "createdAt": {
-    "$date": "2023-03-22T15:22:09.292Z"
-  },
-  "updatedAt": {
-    "$date": "2023-03-22T15:22:09.292Z"
-  },
-  "__v": 0
-}]
+  {
+    "_id": {
+      "$oid": "6430f38a2da27759d7b441c0"
+    },
+    "name": "Le Minh Hung",
+    "date": "2001-02-01",
+    "avatar": "/images/hungdz.png",
+    "email": "leminhhunglmh2001@icloud.com",
+    "password": "$2a$10$1afm8kEHt0Y9RCD/YOzbCu3ipTJArO0YLBy.16uGmdTFrCuo6ZaD.",
+    "role": "admin",
+    "createdAt": {
+      "$date": "2023-05-12T16:37:31.114Z"
+    },
+    "updatedAt": {
+      "$date": "2023-05-12T16:37:31.114Z"
+    },
+    "__v": 0
+  }
+]

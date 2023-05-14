@@ -17,7 +17,7 @@ const orderSchema = new mongoose.Schema(
     },
 
     // Trạng thái đơn hàng (đang chờ xử lý, đã xử lý, đã giao hàng, hủy đơn hàng, ...)
-    status: { type: String, required: true, default: "đang chờ xử lý" },
+    status: { type: String, required: true, default: "pending" },
     shipping_fee: {
       type: Number,
     },

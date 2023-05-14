@@ -2,11 +2,6 @@ const mongoose = require("mongoose");
 
 const reviewSchema = new mongoose.Schema(
   {
-    title: {
-      type: String,
-      min: [1, "Title must be at least 1 character"],
-      required: true,
-    },
     content: {
       type: String,
       min: [1, "Content must be at least 1 character"],
