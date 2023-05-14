@@ -105,7 +105,9 @@ exports.getOrdersByUser = asyncHandler(async (req, res, next) => {
 // @access    Private(For User Who ordered)
 exports.getOrdersByPhone = asyncHandler(async (req, res, next) => {
   console.log("body--", req.body);
-  const orders = await Order.find({ phone: req.body.phone }).sort({
+  console.log("query--", req.query);
+  console.log("params--", req.params);
+  const orders = await Order.find({ phone: req.query.phone }).sort({
     createdAt: -1,
   });
   res.status(codeEnum.SUCCESS).json({ order: orders[0] });
