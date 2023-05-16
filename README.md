@@ -27,4 +27,4 @@ $ npm start
 
 
 #### Lưu ý
-- Thay các biến môi trường cần thiết để có thể chạy project
+- Thay các biến môi trường trong file .env để có thể chạy project
