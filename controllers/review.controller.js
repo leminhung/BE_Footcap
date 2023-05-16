@@ -10,6 +10,7 @@ const { msgEnum } = require("../enum/message.enum");
 // @route     GET /api/v1/reviews
 // @access    Private(Admin)
 exports.getAllReviews = asyncHandler(async (req, res, next) => {
+  console.log("hffhf");
   res.status(codeEnum.SUCCESS).json(res.advancedResults);
 });
 

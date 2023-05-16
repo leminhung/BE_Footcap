@@ -17,9 +17,9 @@ const Review = require("../models/Review.model");
 
 router.get(
   apiEnum.API_GET_REVIEWS,
-  protect,
+  // protect,
   // authorize("admin"),
-  // advancedResults(Review),
+  advancedResults(Review, { path: "user" }),
   getAllReviews
 );
 
@@ -45,4 +45,5 @@ router.put(
 );
 
 router.post(apiEnum.API_CREATE_REVIEW, createReview);
+
 module.exports = router;

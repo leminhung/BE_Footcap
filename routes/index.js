@@ -10,6 +10,7 @@ const couponRouter = require("./coupon.route");
 const reviewRouter = require("./review.route");
 
 const routers = [
+  reviewRouter,
   authRouter,
   productRouter,
   orderRouter,
@@ -19,7 +20,6 @@ const routers = [
   commentRouter,
   stripeRouter,
   couponRouter,
-  reviewRouter,
 ];
 
 module.exports = (app) => {
