@@ -10,19 +10,14 @@ const { msgEnum } = require("../enum/message.enum");
 // @route     GET /api/v1/reviews
 // @access    Private(Admin)
 exports.getAllReviews = asyncHandler(async (req, res, next) => {
-  console.log("hffhf");
   res.status(codeEnum.SUCCESS).json(res.advancedResults);
 });
 
 // @desc      Get all reviews for product
-// @route     GET /api/v1/products/:productId/reviews
+// @route     GET /api/v1/products/reviews?product=
 // @access    Private(Admin)
 exports.getAllReviewsForProduct = asyncHandler(async (req, res, next) => {
-  const reviews = await Review.find({ _id: req.params.productId });
-  if (!reviews) {
-    return next(new ErrorResponse(msgEnum.NOT_FOUND, codeEnum.NOT_FOUND));
-  }
-  res.status(codeEnum.SUCCESS).json({ data: reviews });
+  res.status(codeEnum.SUCCESS).json(res.advancedResults);
 });
 
 // @desc      Add Review

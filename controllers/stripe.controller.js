@@ -154,9 +154,9 @@ const createOrder = async (customer, data) => {
 };
 
 const updateQuantityPurchased = async (productId, purchared) => {
-  return await Product.findByIdAndUpdate(productId, {
-    $set: { quantity_purchased: purchared },
-  });
+  const product = await Product.findById(productId);
+  product.quantity_purchased = product.quantity_purchased + purchared
+  return await product.save();
 };
 
 // Update product quantity

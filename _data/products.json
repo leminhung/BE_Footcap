@@ -1,962 +1,1646 @@
 [
   {
-    "_id": "62471527a185afc10e94d9fa",
-    "title": "Áo phông 3211",
-    "price": 113956.04,
+    "_id": {
+      "$oid": "62471527a185afc10e94d9fa"
+    },
+    "title": "Adidas 3211",
+    "price": 25,
+    "price_before": 250,
     "code": "ccee1315-57e3-4bfc-91f9-e9e555804f77",
-    "color": ["green"],
-    "status": 0,
-    "size": ["M", "L"],
+    "color": ["green", "black"],
+    "status": "0",
+    "size": ["S", "M", "L"],
     "description": "In aliqua consequat amet excepteur amet reprehenderit anim anim.",
+    "rating": 5,
+    "numReviews": 0,
     "discount": 10,
-    "rating": 5,
-    "numberReview": 10,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "644dfb9d6d5ed94f4cd3100c"
+    },
+    "slug": "adidas-3211",
+    "__v": 0,
+    "updatedAt": {
+      "$date": "2023-05-02T09:46:22.869Z"
+    }
   },
   {
-    "_id": "6247152772d1d67d3ccf597f",
-    "title": "Giầy 3250",
-    "price": 111483.94,
+    "_id": {
+      "$oid": "6247152772d1d67d3ccf597f"
+    },
+    "title": "Adidas 3250",
+    "price": 25,
+    "price_before": 200,
     "code": "3644657a-1695-4bff-ac68-d647472564b6",
-    "color": ["blue"],
-    "status": 0,
-    "size": ["3XL"],
+    "color": ["blue", "red"],
+    "status": "0",
+    "size": ["S", "M"],
     "description": "Do sit esse et minim veniam cillum mollit minim.",
+    "rating": 5,
+    "numReviews": 0,
     "discount": 13,
-    "rating": 5,
-    "numberReview": 10,
     "quantity": 3,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3250",
+    "__v": 0,
+    "updatedAt": {
+      "$date": "2023-05-02T09:48:21.842Z"
+    }
   },
   {
-    "_id": "62471527bf79255859fd419f",
-    "title": "Giầy 3175",
-    "price": 100540.95,
+    "_id": {
+      "$oid": "62471527bf79255859fd419f"
+    },
+    "title": "Adidas 3175",
+    "price": 25,
+    "price_before": 200,
     "code": "af34359c-5be7-4138-8be7-668c991136e6",
-    "color": ["brown"],
+    "color": ["brown", "black"],
     "status": 1,
-    "size": ["L"],
+    "size": ["L", "M", "XL"],
     "description": "Consectetur eu consectetur ullamco ipsum veniam magna occaecat exercitation tempor.",
-    "discount": 28,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 28,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3175",
+    "__v": 0
   },
   {
-    "_id": "6247152705e8d681d67d8733",
-    "title": "Giầy 3184",
-    "price": 209834.01,
+    "_id": {
+      "$oid": "6247152705e8d681d67d8733"
+    },
+    "title": "Adidas 3184",
+    "price": 30,
+    "price_before": 200,
     "code": "fd6aee77-a5ea-491c-9085-2959b6fdfc3f",
     "color": ["black"],
     "status": 1,
     "size": ["XXL"],
     "description": "Adipisicing exercitation ea id aliqua excepteur ipsum officia non magna elit.",
+    "rating": 5,
+    "numReviews": 0,
     "discount": 15,
-    "rating": 5,
-    "numberReview": 10,
     "quantity": 3,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3184",
+    "__v": 0,
+    "quantity_purchased": 3,
+    "updatedAt": {
+      "$date": "2023-05-07T16:53:01.109Z"
+    }
   },
   {
-    "_id": "6247152786c716ea7b340bfe",
-    "title": "Giầy 3213",
-    "price": 165100.78,
-    "code": "f971534f-d4dc-4555-a20b-84d3e07b2893",
-    "color": ["green"],
-    "status": 0,
-    "size": ["XL"],
-    "description": "Ut quis aliqua mollit sunt non ut qui eu est mollit dolor sint sunt ut.",
-    "discount": 28,
-    "rating": 5,
-    "numberReview": 10,
-    "quantity": 3,
-    "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
-  },
-  {
-    "_id": "62ede3134b9cf7475d67e57c",
-    "title": "Giầy 3117",
-    "price": 283083.67,
-    "code": "41a49518-322d-43c4-9b93-e84c4a7b67f2",
-    "color": ["black"],
-    "status": 1,
-    "size": ["XL"],
-    "description": "Eiusmod sint minim in consequat id.",
-    "discount": 23,
-    "rating": 5,
-    "numberReview": 10,
-    "quantity": 3,
-    "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
-  },
-  {
-    "_id": "62ede313ceda1ad89c135a9d",
-    "title": "Giầy 3181",
-    "price": 297475.85,
+    "_id": {
+      "$oid": "62ede313ceda1ad89c135a9d"
+    },
+    "title": "Adidas 3181",
+    "price": 30,
+    "price_before": 200,
     "code": "4a55992e-6bee-4e63-bbf7-91e90ac3ad6f",
-    "color": ["black"],
+    "color": ["green", "blue"],
     "status": 0,
-    "size": ["XXL"],
+    "size": ["S", "M", "L"],
     "description": "Laboris minim enim deserunt commodo ad in cillum velit tempor.",
-    "discount": 20,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 12,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": "644dfb9d6d5ed94f4cd3100c",
+    "slug": "adidas-3181",
+    "__v": 0,
+    "updatedAt": {
+      "$date": "2023-04-30T05:31:02.114Z"
+    }
   },
   {
-    "_id": "62ede313420a49d5147abb53",
-    "title": "Giầy 3101",
-    "price": 292928.29,
+    "_id": {
+      "$oid": "62ede313420a49d5147abb53"
+    },
+    "title": "Adidas 3101",
+    "price": 30,
+    "price_before": 200,
     "code": "528a6391-5645-4a01-9cef-869028187bdf",
     "color": ["green"],
     "status": 1,
     "size": ["M"],
     "description": "Occaecat cillum aute duis aute dolore pariatur quis ullamco ad aute reprehenderit quis.",
-    "discount": 22,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 22,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3101",
+    "__v": 0
   },
   {
-    "_id": "62ede313a02c5f7679886cf9",
-    "title": "Giầy 3250",
-    "price": 184549.87,
+    "_id": {
+      "$oid": "62ede313a02c5f7679886cf9"
+    },
+    "title": "Adidas 3250",
+    "price": 120,
+    "price_before": 200,
     "code": "59a0dc15-a431-4f23-aa45-f92e74fe0db2",
     "color": ["green"],
     "status": 1,
     "size": ["M"],
     "description": "Commodo sunt pariatur in deserunt sit non ullamco eu proident ex reprehenderit ut.",
-    "discount": 27,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 27,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3250",
+    "__v": 0
   },
   {
-    "_id": "62ede31388e1515506dc1a9c",
-    "title": "Giầy 3170",
-    "price": 171513.24,
+    "_id": {
+      "$oid": "62ede31388e1515506dc1a9c"
+    },
+    "title": "Adidas 3170",
+    "price": 60,
+    "price_before": 200,
     "code": "46981308-1d2e-4387-ad9c-d4410dd045e2",
     "color": ["black"],
     "status": 0,
     "size": ["XXL"],
     "description": "Et non laboris consequat excepteur quis esse quis deserunt.",
-    "discount": 30,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 30,
     "quantity": 3,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3170",
+    "__v": 0,
+    "quantity_purchased": 0,
+    "updatedAt": {
+      "$date": "2023-05-17T00:25:40.259Z"
+    }
   },
   {
-    "_id": "62ede313dbb4f934396b183f",
-    "title": "Giầy 3219",
-    "price": 120947.16,
+    "_id": {
+      "$oid": "62ede313dbb4f934396b183f"
+    },
+    "title": "Adidas 3219",
+    "price": 150,
+    "price_before": 200,
     "code": "e350ba0d-3936-4b95-829f-d322553fe2ca",
     "color": ["black"],
     "status": 1,
     "size": ["M"],
     "description": "Veniam duis minim ex sit.",
-    "discount": 22,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 22,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3219",
+    "__v": 0,
+    "updatedAt": {
+      "$date": "2023-05-07T16:53:01.109Z"
+    }
   },
   {
-    "_id": "62ede3135ce4b1093b84254a",
-    "title": "Giầy 3222",
-    "price": 232139.46,
+    "_id": {
+      "$oid": "62ede3135ce4b1093b84254a"
+    },
+    "title": "Adidas 3222",
+    "price": 30,
+    "price_before": 200,
     "code": "d04a7fda-5e97-4de5-9ac3-46653b9867a5",
     "color": ["green"],
     "status": 1,
     "size": ["XXL"],
     "description": "Ipsum fugiat laboris incididunt in ullamco mollit cillum excepteur cupidatat.",
-    "discount": 25,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 25,
     "quantity": 3,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ac6003c68d049bbb0"
+    "category": {
+      "$oid": "620d1c5ac6003c68d049bbb0"
+    },
+    "slug": "adidas-3222",
+    "__v": 0,
+    "quantity_purchased": 10,
+    "updatedAt": {
+      "$date": "2023-05-07T16:53:01.109Z"
+    }
   },
   {
-    "_id": "62ede31362665f953e207969",
-    "title": "Giầy 3182",
-    "price": 215698.69,
+    "_id": {
+      "$oid": "62ede31362665f953e207969"
+    },
+    "title": "Adidas 3182",
+    "price": 180,
+    "price_before": 180,
     "code": "d39133c0-8b5b-4379-8c38-1cc12b659ef5",
     "color": ["blue"],
     "status": 0,
-    "size": ["3XL"],
+    "size": ["M"],
     "description": "Id nisi aliquip ex deserunt sunt mollit voluptate velit et velit consectetur minim ut.",
+    "rating": 5,
+    "numReviews": 0,
     "discount": 27,
-    "rating": 5,
-    "numberReview": 10,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ac6003c68d049bbb0"
+    "category": {
+      "$oid": "620d1c5ac6003c68d049bbb0"
+    },
+    "slug": "adidas-3182",
+    "__v": 0
   },
   {
-    "_id": "62ede31336ddbded28fd9992",
-    "title": "Giầy 3112",
-    "price": 216704.64,
+    "_id": {
+      "$oid": "62ede31336ddbded28fd9992"
+    },
+    "title": "Adidas 3112",
+    "price": 300,
+    "price_before": 180,
     "code": "bf8229c1-55ad-4899-8faf-4581098387fa",
-    "color": ["blue"],
+    "color": ["green", "blue"],
     "status": 0,
-    "size": ["3XL"],
+    "size": ["XS", "S"],
     "description": "Sit sint do duis proident qui exercitation esse tempor sint occaecat officia sint.",
-    "discount": 11,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 10,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ac6003c68d049bbb0"
+    "category": {
+      "$oid": "620d1c5ac6003c68d049bbb0"
+    },
+    "slug": "adidas-3112",
+    "__v": 0
   },
   {
-    "_id": "62ede3138f3694ef096b6cd2",
-    "title": "Giầy 3188",
-    "price": 160883.74,
+    "_id": {
+      "$oid": "62ede3138f3694ef096b6cd2"
+    },
+    "title": "Adidas 3188",
+    "price": 50,
+    "price_before": 180,
     "code": "9aa48ce2-c867-4397-a159-70f0c63f07ed",
     "color": ["brown"],
     "status": 0,
     "size": ["XL"],
     "description": "Enim sit non id eiusmod labore id.",
-    "discount": 22,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 22,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ac6003c68d049bbb0"
+    "category": {
+      "$oid": "620d1c5ac6003c68d049bbb0"
+    },
+    "slug": "adidas-3188",
+    "__v": 0
   },
   {
-    "_id": "62ede313c66d6ab16daced4d",
-    "title": "Giầy 3272",
-    "price": 207944.33,
+    "_id": {
+      "$oid": "62ede313c66d6ab16daced4d"
+    },
+    "title": "Adidas 3272",
+    "price": 30,
+    "price_before": 180,
     "code": "b7448589-6eb7-4183-b44d-33b2dd182f13",
     "color": ["blue"],
     "status": 1,
     "size": ["XL"],
     "description": "Sunt pariatur esse mollit pariatur ex exercitation mollit duis.",
-    "discount": 27,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 27,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ac6003c68d049bbb0"
+    "category": {
+      "$oid": "620d1c5ac6003c68d049bbb0"
+    },
+    "slug": "adidas-3272",
+    "__v": 0
   },
   {
-    "_id": "62ede313d3c741e275f53888",
-    "title": "Giầy 3178",
-    "price": 180352.46,
+    "_id": {
+      "$oid": "62ede313d3c741e275f53888"
+    },
+    "title": "Adidas 3178",
+    "price": 200,
+    "price_before": 180,
     "code": "0d89b13b-8b60-447e-9d01-c8faf7877a8a",
     "color": ["green"],
     "status": 0,
     "size": ["3XL"],
     "description": "Magna voluptate eiusmod excepteur ex magna ex dolore do est esse sint.",
-    "discount": 17,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 17,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ac6003c68d049bbb0"
+    "category": {
+      "$oid": "620d1c5ac6003c68d049bbb0"
+    },
+    "slug": "adidas-3178",
+    "__v": 0
   },
   {
-    "_id": "62ede3134c65d5c7c740921f",
-    "title": "Giầy 3261",
-    "price": 204499.88,
+    "_id": {
+      "$oid": "62ede3134c65d5c7c740921f"
+    },
+    "title": "Adidas 3261",
+    "price": 30,
+    "price_before": 180,
     "code": "8b97ef83-4e27-4e59-9db3-1608c896e02b",
     "color": ["blue"],
     "status": 1,
     "size": ["XXL"],
     "description": "Aliqua enim consequat amet irure in et quis.",
-    "discount": 29,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 29,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ac6003c68d049bbb0"
+    "category": {
+      "$oid": "620d1c5ac6003c68d049bbb0"
+    },
+    "slug": "adidas-3261",
+    "__v": 0
   },
   {
-    "_id": "62ede3138386023bb7073f70",
-    "title": "Giầy 3254",
-    "price": 260814.38,
+    "_id": {
+      "$oid": "62ede3138386023bb7073f70"
+    },
+    "title": "Adidas 3254",
+    "price": 30,
+    "price_before": 180,
     "code": "e7e02435-a380-479f-b7fa-b2ff57bba0a2",
     "color": ["brown"],
     "status": 0,
     "size": ["XXL"],
     "description": "Sint in anim veniam aliquip ea eu.",
-    "discount": 18,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 18,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ac6003c68d049bbb0"
+    "category": {
+      "$oid": "620d1c5ac6003c68d049bbb0"
+    },
+    "slug": "adidas-3254",
+    "__v": 0
   },
   {
-    "_id": "62ede313a510edcee9ed2572",
-    "title": "Giầy 3167",
-    "price": 246336.35,
+    "_id": {
+      "$oid": "62ede313a510edcee9ed2572"
+    },
+    "title": "Adidas 3167",
+    "price": 30,
+    "price_before": 180,
     "code": "5fcda581-b5f3-41eb-ba1e-cdc8571df026",
     "color": ["black"],
     "status": 1,
     "size": ["M"],
     "description": "Incididunt commodo esse in culpa qui pariatur minim laboris excepteur laborum.",
+    "rating": 5,
+    "numReviews": 0,
     "discount": 28,
-    "rating": 5,
-    "numberReview": 10,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ac6003c68d049bbb0"
+    "category": {
+      "$oid": "620d1c5ac6003c68d049bbb0"
+    },
+    "slug": "adidas-3167",
+    "__v": 0
   },
   {
-    "_id": "62ede313abbf2a2a85634f06",
-    "title": "Giầy 3255",
-    "price": 282306.85,
-    "code": "73cc015f-f3e1-42bf-bef9-6883136685e8",
-    "color": ["brown"],
-    "status": 1,
+    "_id": {
+      "$oid": "6247152786c716ea7b340bfe"
+    },
+    "title": "Adidas 3213",
+    "price": 30,
+    "price_before": 180,
+    "code": "f971534f-d4dc-4555-a20b-84d3e07b2893",
+    "color": ["green"],
+    "status": 0,
     "size": ["XL"],
-    "description": "Excepteur deserunt fugiat aliquip labore anim fugiat voluptate adipisicing.",
-    "discount": 13,
+    "description": "Ut quis aliqua mollit sunt non ut qui eu est mollit dolor sint sunt ut.",
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 28,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ac6003c68d049bbb0"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3213",
+    "__v": 0
   },
   {
-    "_id": "62ede31353d9cee184926e80",
-    "title": "Giầy 3192",
-    "price": 220228.64,
+    "_id": {
+      "$oid": "62ede31353d9cee184926e80"
+    },
+    "title": "Adidas 3192",
+    "price": 30,
+    "price_before": 180,
     "code": "f11bbb1e-e7e8-4496-b531-8b0b179adee2",
     "color": ["blue"],
     "status": 1,
     "size": ["M"],
     "description": "Eiusmod occaecat labore anim pariatur.",
+    "rating": 5,
+    "numReviews": 0,
     "discount": 26,
-    "rating": 5,
-    "numberReview": 10,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3192",
+    "__v": 0
   },
   {
-    "_id": "62ede313a09349a639e8ac5b",
-    "title": "Giầy 3100",
-    "price": 134875.06,
-    "code": "bfc0a142-26db-42bf-bd6d-490db47ea9e2",
-    "color": ["brown"],
+    "_id": {
+      "$oid": "62ede3134b9cf7475d67e57c"
+    },
+    "title": "Adidas 3117",
+    "price": 30,
+    "price_before": 180,
+    "code": "41a49518-322d-43c4-9b93-e84c4a7b67f2",
+    "color": ["black"],
     "status": 1,
-    "size": ["3XL"],
-    "description": "Adipisicing id mollit cillum commodo aute dolor laborum.",
-    "discount": 12,
+    "size": ["XL"],
+    "description": "Eiusmod sint minim in consequat id.",
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 23,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ac3badda50a46072c"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3117",
+    "__v": 0
   },
   {
-    "_id": "62ede31315f28183de1bf198",
-    "title": "Giầy 3217",
-    "price": 132906.11,
+    "_id": {
+      "$oid": "62ede31315f28183de1bf198"
+    },
+    "title": "Adidas 3217",
+    "price": 30,
+    "price_before": 300,
     "code": "4bd91342-aa8e-4604-955c-7d845f440530",
     "color": ["black"],
     "status": 1,
     "size": ["XXL"],
     "description": "Adipisicing excepteur Lorem culpa reprehenderit mollit amet in consequat labore sint enim eu voluptate duis.",
-    "discount": 22,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 22,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ac3badda50a46072c"
+    "category": {
+      "$oid": "620d1c5ac3badda50a46072c"
+    },
+    "slug": "adidas-3217",
+    "__v": 0
   },
   {
-    "_id": "62ede3136b3eaf8c8a6345b6",
-    "title": "Giầy 3216",
-    "price": 278774.93,
+    "_id": {
+      "$oid": "62ede3136b3eaf8c8a6345b6"
+    },
+    "title": "Adidas 3216",
+    "price": 30,
+    "price_before": 300,
     "code": "c54c9cdf-4930-436b-83ab-b714c5dd8be3",
     "color": ["black"],
     "status": 1,
     "size": ["L"],
     "description": "Officia ipsum reprehenderit non commodo velit sit quis.",
-    "discount": 25,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 25,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ac3badda50a46072c"
+    "category": {
+      "$oid": "620d1c5ac3badda50a46072c"
+    },
+    "slug": "adidas-3216",
+    "__v": 0
   },
   {
-    "_id": "62ede313c0f0d98d9dc4c78c",
-    "title": "Giầy 3275",
-    "price": 100817.81,
+    "_id": {
+      "$oid": "62ede313c0f0d98d9dc4c78c"
+    },
+    "title": "Adidas 3275",
+    "price": 30,
+    "price_before": 300,
     "code": "8c780e64-1860-4715-a96e-0d5f23f68c35",
     "color": ["black"],
     "status": 0,
     "size": ["M"],
     "description": "Labore sint elit cupidatat quis commodo.",
-    "discount": 22,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 22,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ac3badda50a46072c"
+    "category": {
+      "$oid": "620d1c5ac3badda50a46072c"
+    },
+    "slug": "adidas-3275",
+    "__v": 0
   },
   {
-    "_id": "62ede313f34e06b805b338fe",
-    "title": "Giầy 3298",
-    "price": 152764.55,
+    "_id": {
+      "$oid": "62ede313f34e06b805b338fe"
+    },
+    "title": "Adidas 3298",
+    "price": 30,
+    "price_before": 300,
     "code": "fcc3d3b1-68c3-47e3-9021-260f07d0f00d",
     "color": ["green"],
     "status": 0,
     "size": ["XL"],
     "description": "Qui elit mollit reprehenderit occaecat non nulla enim et id mollit minim tempor.",
-    "discount": 29,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 29,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ac3badda50a46072c"
+    "category": {
+      "$oid": "620d1c5ac3badda50a46072c"
+    },
+    "slug": "adidas-3298",
+    "__v": 0
   },
   {
-    "_id": "62ede313dea063c6eeca3931",
-    "title": "Giầy 3209",
-    "price": 128267.05,
+    "_id": {
+      "$oid": "62ede313dea063c6eeca3931"
+    },
+    "title": "Adidas 3209",
+    "price": 30,
+    "price_before": 300,
     "code": "227df63e-af11-4048-83a6-4292354f8589",
     "color": ["black"],
     "status": 0,
     "size": ["XXL"],
     "description": "Excepteur esse est deserunt irure cillum ipsum enim consequat commodo nisi.",
-    "discount": 19,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 19,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ac3badda50a46072c"
+    "category": {
+      "$oid": "620d1c5ac3badda50a46072c"
+    },
+    "slug": "adidas-3209",
+    "__v": 0
   },
   {
-    "_id": "62ede313bb4dddcfe2b5d12a",
-    "title": "Giầy 3272",
-    "price": 164689.36,
+    "_id": {
+      "$oid": "62ede313bb4dddcfe2b5d12a"
+    },
+    "title": "Adidas 3272",
+    "price": 30,
+    "price_before": 300,
     "code": "322297ef-eaa3-4f88-beb3-80c7419bb861",
     "color": ["green"],
     "status": 1,
     "size": ["XL"],
     "description": "Aute occaecat nisi incididunt mollit officia cupidatat reprehenderit nostrud culpa id fugiat cupidatat.",
-    "discount": 18,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 18,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ac3badda50a46072c"
+    "category": {
+      "$oid": "620d1c5ac3badda50a46072c"
+    },
+    "slug": "adidas-3272",
+    "__v": 0
   },
   {
-    "_id": "62ede313ea080bca42fc5974",
-    "title": "Giầy 3176",
-    "price": 257328.64,
+    "_id": {
+      "$oid": "62ede313ea080bca42fc5974"
+    },
+    "title": "Adidas 3176",
+    "price": 30,
+    "price_before": 300,
     "code": "7b2d2192-707b-4734-b6ec-f4e15d334d6e",
     "color": ["black"],
     "status": 0,
     "size": ["L"],
     "description": "Dolore sunt aliqua enim eu irure eiusmod non eiusmod et.",
-    "discount": 11,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 11,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ac3badda50a46072c"
+    "category": {
+      "$oid": "620d1c5ac3badda50a46072c"
+    },
+    "slug": "adidas-3176",
+    "__v": 0
   },
   {
-    "_id": "62ede313199a641dfdaaeba0",
-    "title": "Giầy 3254",
-    "price": 198691.22,
+    "_id": {
+      "$oid": "62ede313199a641dfdaaeba0"
+    },
+    "title": "Adidas 3254",
+    "price": 30,
+    "price_before": 300,
     "code": "84d05891-ae65-4a5b-b78d-d366e3fbbe56",
     "color": ["green"],
     "status": 0,
     "size": ["3XL"],
     "description": "Exercitation nisi cupidatat eiusmod anim ut veniam deserunt nisi magna proident.",
-    "discount": 29,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 29,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ac3badda50a46072c"
+    "category": {
+      "$oid": "620d1c5ac3badda50a46072c"
+    },
+    "slug": "adidas-3254",
+    "__v": 0
   },
   {
-    "_id": "62ede313d644373e740d57b9",
-    "title": "Giầy 3224",
-    "price": 262295.01,
+    "_id": {
+      "$oid": "62ede313d644373e740d57b9"
+    },
+    "title": "Adidas 3224",
+    "price": 30,
+    "price_before": 300,
     "code": "b1a397bf-b21d-4d8e-b7df-4e1ffaa7f2c5",
     "color": ["blue"],
     "status": 1,
     "size": ["XXL"],
     "description": "Commodo sunt ea laborum aliqua cillum consequat eu eiusmod reprehenderit ea ea.",
-    "discount": 20,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 20,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ac3badda50a46072c"
+    "category": {
+      "$oid": "620d1c5ac3badda50a46072c"
+    },
+    "slug": "adidas-3224",
+    "__v": 0
   },
   {
-    "_id": "62ede313eac85a61ba38415f",
-    "title": "Giầy 3173",
-    "price": 212497.52,
+    "_id": {
+      "$oid": "62ede313eac85a61ba38415f"
+    },
+    "title": "Adidas 3173",
+    "price": 30,
+    "price_before": 300,
     "code": "e9ee36dc-e1a2-479f-a3e6-abcd46c8e5f0",
     "color": ["green"],
     "status": 1,
     "size": ["XL"],
     "description": "Exercitation proident aliquip tempor eiusmod qui magna esse irure elit fugiat qui deserunt cillum.",
-    "discount": 10,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 10,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ac3badda50a46072c"
+    "category": {
+      "$oid": "620d1c5ac3badda50a46072c"
+    },
+    "slug": "adidas-3173",
+    "__v": 0
   },
   {
-    "_id": "62ede313307255074a256eca",
-    "title": "Giầy 3264",
-    "price": 114591.46,
+    "_id": {
+      "$oid": "62ede313307255074a256eca"
+    },
+    "title": "Adidas 3264",
+    "price": 30,
+    "price_before": 300,
     "code": "16e96ad5-c404-4191-999e-8e9851816ace",
     "color": ["brown"],
     "status": 1,
     "size": ["XXL"],
     "description": "Veniam exercitation reprehenderit labore eu qui duis consectetur ut commodo id do excepteur ipsum dolore.",
-    "discount": 29,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 29,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3264",
+    "__v": 0
   },
   {
-    "_id": "62ede313871b749d15e45750",
-    "title": "Giầy 3287",
-    "price": 223601.22,
+    "_id": {
+      "$oid": "62ede313871b749d15e45750"
+    },
+    "title": "Adidas 3287",
+    "price": 30,
+    "price_before": 100,
     "code": "9809e10f-67ac-4d53-a4a0-3fed62a97a93",
     "color": ["black"],
     "status": 0,
     "size": ["XL"],
     "description": "Non enim Lorem magna sint sit anim minim enim nulla voluptate.",
-    "discount": 12,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 12,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3287",
+    "__v": 0
   },
   {
-    "_id": "62ede3133ac10a2ddeebd16d",
-    "title": "Giầy 3163",
-    "price": 149942.97,
+    "_id": {
+      "$oid": "62ede3133ac10a2ddeebd16d"
+    },
+    "title": "Adidas 3163",
+    "price": 30,
+    "price_before": 100,
     "code": "8c2f355f-6ebc-49ad-a1fb-0f41dfb0bb88",
     "color": ["black"],
     "status": 1,
     "size": ["M"],
     "description": "Nulla laborum nostrud mollit esse laborum in reprehenderit proident elit veniam irure officia elit.",
-    "discount": 20,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 20,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3163",
+    "__v": 0
   },
   {
-    "_id": "62ede31379060d7dd21bd54e",
-    "title": "Giầy 3109",
-    "price": 163219.38,
+    "_id": {
+      "$oid": "62ede31379060d7dd21bd54e"
+    },
+    "title": "Adidas 3109",
+    "price": 30,
+    "price_before": 100,
     "code": "9b493372-0b78-4eba-a147-2fd4cde79c51",
     "color": ["brown"],
     "status": 1,
     "size": ["M"],
     "description": "Non deserunt Lorem eu veniam ut do enim cupidatat sunt deserunt sunt ea sunt.",
-    "discount": 19,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 19,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3109",
+    "__v": 0
   },
   {
-    "_id": "62ede31325385c8da8333d94",
-    "title": "Giầy 3119",
-    "price": 121488.14,
+    "_id": {
+      "$oid": "62ede31325385c8da8333d94"
+    },
+    "title": "Adidas 3119",
+    "price": 30,
+    "price_before": 100,
     "code": "c1c3daad-e77f-4c2a-b6ad-5caf9b187284",
     "color": ["brown"],
     "status": 1,
     "size": ["L"],
     "description": "Labore cillum nostrud cillum laborum velit laboris do officia.",
-    "discount": 15,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 15,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3119",
+    "__v": 0
   },
   {
-    "_id": "62ede31324143bac6e8ce4e2",
-    "title": "Giầy 3271",
-    "price": 123716.84,
+    "_id": {
+      "$oid": "62ede31324143bac6e8ce4e2"
+    },
+    "title": "Adidas 3271",
+    "price": 30,
+    "price_before": 100,
     "code": "5363e9be-47ec-4963-9ed3-d77a1825f595",
     "color": ["brown"],
     "status": 0,
     "size": ["XL"],
     "description": "Lorem ad commodo anim esse reprehenderit.",
-    "discount": 23,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 23,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3271",
+    "__v": 0
   },
   {
-    "_id": "62ede3138527584b51c63e98",
-    "title": "Giầy 3213",
-    "price": 278345.59,
+    "_id": {
+      "$oid": "62ede3138527584b51c63e98"
+    },
+    "title": "Adidas 3213",
+    "price": 30,
+    "price_before": 100,
     "code": "8618e3b2-3fab-404c-8b03-7aedc2a8c2d9",
     "color": ["green"],
     "status": 1,
     "size": ["XXL"],
     "description": "Ipsum id ex anim sint consequat esse ut tempor enim consequat ad dolor sit magna.",
-    "discount": 18,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 18,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3213",
+    "__v": 0
   },
   {
-    "_id": "62ede31331009931424f4cf5",
-    "title": "Giầy 3262",
-    "price": 186594.25,
+    "_id": {
+      "$oid": "62ede31331009931424f4cf5"
+    },
+    "title": "Adidas 3262",
+    "price": 30,
+    "price_before": 100,
     "code": "9a306f2b-43d0-4bc1-bff8-830a0ab3dcf5",
     "color": ["green"],
     "status": 0,
     "size": ["M"],
     "description": "Enim officia mollit adipisicing sunt et.",
-    "discount": 24,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 24,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3262",
+    "__v": 0
   },
   {
-    "_id": "62ede313fc3687cc87339ed0",
-    "title": "Giầy 3110",
-    "price": 234368.03,
+    "_id": {
+      "$oid": "62ede313fc3687cc87339ed0"
+    },
+    "title": "Adidas 3110",
+    "price": 30,
+    "price_before": 100,
     "code": "a079da7d-93e7-4768-8ee6-371c64714f05",
     "color": ["blue"],
     "status": 1,
     "size": ["XXL"],
     "description": "Irure et nostrud ex cillum nulla do officia adipisicing qui aliquip.",
-    "discount": 27,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 27,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3110",
+    "__v": 0
   },
   {
-    "_id": "62ede313676c9fd4381cff20",
-    "title": "Giầy 3214",
-    "price": 276878.75,
+    "_id": {
+      "$oid": "62ede313676c9fd4381cff20"
+    },
+    "title": "Adidas 3214",
+    "price": 30,
+    "price_before": 100,
     "code": "26ab4800-d87c-47b6-babf-e2a9ba4f74d4",
     "color": ["green"],
     "status": 1,
     "size": ["XXL"],
     "description": "Ut do consequat ea qui commodo et.",
-    "discount": 18,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 18,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3214",
+    "__v": 0
   },
   {
-    "_id": "62ede31333f609d56e0217c7",
-    "title": "Giầy 3167",
-    "price": 243919.58,
+    "_id": {
+      "$oid": "62ede31333f609d56e0217c7"
+    },
+    "title": "Adidas 3167",
+    "price": 30,
+    "price_before": 100,
     "code": "fab61741-dde7-4b56-8f2b-1b37dcaae65a",
     "color": ["black"],
     "status": 1,
     "size": ["XL"],
     "description": "Do laboris cupidatat sint deserunt proident sit nisi sit cillum esse non deserunt.",
-    "discount": 22,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 22,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3167",
+    "__v": 0
   },
   {
-    "_id": "62ede31382d82e2c3c2fe28e",
-    "title": "Giầy 3117",
-    "price": 148447.42,
+    "_id": {
+      "$oid": "62ede31382d82e2c3c2fe28e"
+    },
+    "title": "Adidas 3117",
+    "price": 30,
+    "price_before": 100,
     "code": "34522f19-7052-4af1-a0b8-de16edc8e78c",
     "color": ["black"],
     "status": 1,
     "size": ["M"],
     "description": "Exercitation consequat ex sint officia.",
-    "discount": 13,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 13,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3117",
+    "__v": 0
   },
   {
-    "_id": "62ede31357b6f2d59a7185e0",
-    "title": "Giầy 3100",
-    "price": 192729.29,
-    "code": "d04be1be-b548-4186-b70d-627d76c9fd9d",
+    "_id": {
+      "$oid": "62ede313abbf2a2a85634f06"
+    },
+    "title": "Adidas 3255",
+    "price": 30,
+    "price_before": 200,
+    "code": "73cc015f-f3e1-42bf-bef9-6883136685e8",
     "color": ["brown"],
     "status": 1,
-    "size": ["M"],
-    "description": "Excepteur qui velit duis irure nostrud minim Lorem irure aliqua est est in consequat mollit.",
-    "discount": 27,
+    "size": ["XL"],
+    "description": "Excepteur deserunt fugiat aliquip labore anim fugiat voluptate adipisicing.",
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 13,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ac6003c68d049bbb0"
+    },
+    "slug": "adidas-3255",
+    "__v": 0
   },
   {
-    "_id": "62ede31383e2279389b4e660",
-    "title": "Giầy 3269",
-    "price": 279603.22,
+    "_id": {
+      "$oid": "62ede31383e2279389b4e660"
+    },
+    "title": "Adidas 3269",
+    "price": 30,
+    "price_before": 200,
     "code": "467a351f-f4d9-4bc5-bedc-9be634efb748",
     "color": ["black"],
     "status": 1,
     "size": ["M"],
     "description": "Nisi mollit excepteur incididunt ipsum mollit dolor elit ex ullamco.",
+    "rating": 5,
+    "numReviews": 0,
     "discount": 11,
-    "rating": 5,
-    "numberReview": 10,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3269",
+    "__v": 0
   },
   {
-    "_id": "62ede31377d8f33b0bb55bcf",
-    "title": "Giầy 3110",
-    "price": 110691.08,
-    "code": "8951740d-6a16-4552-9137-288a15914d79",
-    "color": ["blue"],
+    "_id": {
+      "$oid": "62ede313a09349a639e8ac5b"
+    },
+    "title": "Adidas 3100",
+    "price": 30,
+    "price_before": 200,
+    "code": "bfc0a142-26db-42bf-bd6d-490db47ea9e2",
+    "color": ["brown"],
     "status": 1,
-    "size": ["L"],
-    "description": "Irure in nisi consectetur et occaecat fugiat pariatur.",
-    "discount": 24,
+    "size": ["3XL"],
+    "description": "Adipisicing id mollit cillum commodo aute dolor laborum.",
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 12,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ac3badda50a46072c"
+    },
+    "slug": "adidas-3100",
+    "__v": 0
   },
   {
-    "_id": "62ede313081881ea7ad92784",
-    "title": "Giầy 3155",
-    "price": 140262.33,
+    "_id": {
+      "$oid": "62ede313081881ea7ad92784"
+    },
+    "title": "Adidas 3155",
+    "price": 30,
+    "price_before": 200,
     "code": "2bef32a2-58b6-43ef-bd5a-85dac89239d6",
     "color": ["blue"],
     "status": 0,
     "size": ["L"],
     "description": "Mollit ullamco ullamco aute non.",
-    "discount": 22,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 22,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3155",
+    "__v": 0
   },
   {
-    "_id": "62ede3130178d53ebc9d3a86",
-    "title": "Giầy 3134",
-    "price": 187300.75,
+    "_id": {
+      "$oid": "62ede3130178d53ebc9d3a86"
+    },
+    "title": "Adidas 3134",
+    "price": 30,
+    "price_before": 200,
     "code": "4eec407f-1434-418b-b2e9-dea6ede50842",
     "color": ["blue"],
     "status": 1,
     "size": ["XL"],
     "description": "Proident elit est ipsum consectetur nostrud elit sunt occaecat.",
-    "discount": 28,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 28,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3134",
+    "__v": 0
   },
   {
-    "_id": "62ede313db85db81ea037428",
-    "title": "Giầy 3212",
-    "price": 143285.89,
+    "_id": {
+      "$oid": "62ede313db85db81ea037428"
+    },
+    "title": "Adidas 3212",
+    "price": 30,
+    "price_before": 200,
     "code": "b97d125f-ca30-43fc-9fd0-4a82ff9e3885",
     "color": ["blue"],
     "status": 0,
     "size": ["L"],
     "description": "Est dolor minim officia labore laboris nostrud eiusmod adipisicing dolore ex.",
-    "discount": 16,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 16,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3212",
+    "__v": 0
   },
   {
-    "_id": "62ede31381d5b24478f45dcd",
-    "title": "Giầy 3109",
-    "price": 105861.08,
+    "_id": {
+      "$oid": "62ede31381d5b24478f45dcd"
+    },
+    "title": "Adidas 3109",
+    "price": 30,
+    "price_before": 200,
     "code": "9a0ab526-778c-4953-beba-dfd3ac0bc336",
     "color": ["blue"],
     "status": 0,
     "size": ["XXL"],
     "description": "Lorem elit exercitation veniam mollit laboris amet labore sunt sint nostrud dolor ut veniam.",
-    "discount": 25,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 25,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3109",
+    "__v": 0
   },
   {
-    "_id": "62ede313049a9af9884b6d6b",
-    "title": "Giầy 3259",
-    "price": 131979.12,
+    "_id": {
+      "$oid": "62ede313049a9af9884b6d6b"
+    },
+    "title": "Adidas 3259",
+    "price": 30,
+    "price_before": 200,
     "code": "1ade5c8d-882a-4871-8755-d0d3505160b3",
     "color": ["green"],
     "status": 1,
     "size": ["L"],
     "description": "Enim ex eiusmod tempor enim elit enim Lorem magna elit amet consectetur.",
-    "discount": 11,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 11,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3259",
+    "__v": 0
   },
   {
-    "_id": "62ede313c4775f27a872a400",
-    "title": "Giầy 3108",
-    "price": 135154.58,
+    "_id": {
+      "$oid": "62ede313c4775f27a872a400"
+    },
+    "title": "Adidas 3108",
+    "price": 30,
+    "price_before": 200,
     "code": "c96a7d66-c131-4044-8771-9eb6a7c28055",
     "color": ["brown"],
     "status": 0,
     "size": ["XXL"],
     "description": "Qui minim pariatur veniam culpa fugiat tempor magna duis dolore duis.",
-    "discount": 13,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 13,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3108",
+    "__v": 0
   },
   {
-    "_id": "62ede31319b43d666246bad4",
-    "title": "Giầy 3199",
-    "price": 288279.25,
+    "_id": {
+      "$oid": "62ede31319b43d666246bad4"
+    },
+    "title": "Adidas 3199",
+    "price": 30,
+    "price_before": 200,
     "code": "35863893-4328-4802-bbf6-d08d09ba679f",
     "color": ["brown"],
     "status": 1,
     "size": ["L"],
     "description": "Culpa duis nulla quis occaecat non Lorem aliquip laborum adipisicing ea dolor velit consectetur.",
+    "rating": 5,
+    "numReviews": 0,
     "discount": 17,
-    "rating": 5,
-    "numberReview": 10,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3199",
+    "__v": 0
   },
   {
-    "_id": "62ede313ae26a53f9ac828a6",
-    "title": "Giầy 3261",
-    "price": 226569.26,
-    "code": "9099ac10-ef72-4543-8afc-64d1ea88a499",
-    "color": ["brown"],
-    "status": 0,
-    "size": ["3XL"],
-    "description": "Voluptate excepteur ex anim non velit ex in aliquip deserunt sint fugiat in aliqua ex.",
-    "discount": 15,
-    "rating": 5,
-    "numberReview": 10,
-    "quantity": 3,
-    "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
-  },
-  {
-    "_id": "62ede3135d30487a4e5fd4d4",
-    "title": "Giầy 3202",
-    "price": 136664.28,
+    "_id": {
+      "$oid": "62ede3135d30487a4e5fd4d4"
+    },
+    "title": "Adidas 3202",
+    "price": 30,
+    "price_before": 200,
     "code": "9177237e-1efd-4774-b779-3f9c4d35daac",
     "color": ["brown"],
     "status": 0,
     "size": ["M"],
     "description": "Exercitation reprehenderit magna ex id minim reprehenderit velit elit consequat nulla.",
-    "discount": 24,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 24,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3202",
+    "__v": 0
   },
   {
-    "_id": "62ede313fa9e070ad6e41a6b",
-    "title": "Giầy 3109",
-    "price": 250309.89,
+    "_id": {
+      "$oid": "62ede313ae26a53f9ac828a6"
+    },
+    "title": "Adidas 3261",
+    "price": 30,
+    "price_before": 250,
+    "code": "9099ac10-ef72-4543-8afc-64d1ea88a499",
+    "color": ["brown"],
+    "status": 0,
+    "size": ["3XL"],
+    "description": "Voluptate excepteur ex anim non velit ex in aliquip deserunt sint fugiat in aliqua ex.",
+    "rating": 5,
+    "numReviews": 0,
+    "discount": 15,
+    "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
+    "featured": 1,
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3261",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "62ede313fa9e070ad6e41a6b"
+    },
+    "title": "Adidas 3109",
+    "price": 30,
+    "price_before": 250,
     "code": "bc8e948f-bac4-4ec0-9514-bfd2e6d4670d",
     "color": ["green"],
     "status": 0,
     "size": ["XL"],
     "description": "Excepteur in ullamco ad in cupidatat id esse.",
-    "discount": 27,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 27,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3109",
+    "__v": 0
   },
   {
-    "_id": "62ede3130f89e03c97bfae84",
-    "title": "Giầy 3246",
-    "price": 181421.35,
+    "_id": {
+      "$oid": "62ede3130f89e03c97bfae84"
+    },
+    "title": "Adidas 3246",
+    "price": 30,
+    "price_before": 250,
     "code": "d8321906-e2ab-44b5-acc8-6e6477a4eb0a",
     "color": ["green"],
     "status": 0,
     "size": ["L"],
     "description": "Excepteur culpa occaecat nostrud et qui exercitation.",
-    "discount": 13,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 13,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3246",
+    "__v": 0
   },
   {
-    "_id": "62ede313b951747862a2fc1e",
-    "title": "Giầy 3252",
-    "price": 164353.91,
+    "_id": {
+      "$oid": "62ede313b951747862a2fc1e"
+    },
+    "title": "Adidas 3252",
+    "price": 30,
+    "price_before": 250,
     "code": "8d993145-f4aa-4f7a-9707-1e712b1a91d5",
     "color": ["green"],
     "status": 1,
     "size": ["XL"],
     "description": "Sint esse ipsum incididunt ex duis sunt.",
-    "discount": 19,
     "rating": 5,
-    "numberReview": 10,
+    "numReviews": 0,
+    "discount": 19,
     "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
     "featured": 1,
-    "category": "620d1c5ae5667cdd09ee7e23"
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3252",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "62ede31357b6f2d59a7185e0"
+    },
+    "title": "Adidas 3100",
+    "price": 30,
+    "price_before": 250,
+    "code": "d04be1be-b548-4186-b70d-627d76c9fd9d",
+    "color": ["brown"],
+    "status": 1,
+    "size": ["M"],
+    "description": "Excepteur qui velit duis irure nostrud minim Lorem irure aliqua est est in consequat mollit.",
+    "rating": 5,
+    "numReviews": 0,
+    "discount": 27,
+    "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
+    "featured": 1,
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3100",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "62ede31377d8f33b0bb55bcf"
+    },
+    "title": "Adidas 3110",
+    "price": 30,
+    "price_before": 250,
+    "code": "8951740d-6a16-4552-9137-288a15914d79",
+    "color": ["blue"],
+    "status": 1,
+    "size": ["L"],
+    "description": "Irure in nisi consectetur et occaecat fugiat pariatur.",
+    "rating": 5,
+    "numReviews": 0,
+    "discount": 24,
+    "quantity": 3,
+    "quantity_purchased": 1,
+    "sold": 0,
+    "featured": 1,
+    "category": {
+      "$oid": "620d1c5ae5667cdd09ee7e23"
+    },
+    "slug": "adidas-3110",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "644d51bb2e7ef56d120782eb"
+    },
+    "title": "Adidas Plrboost",
+    "price": 200,
+    "price_before": 250,
+    "code": "f03fbd11-4c5b-4052-93f9-c3259c24e2f8",
+    "color": [],
+    "status": 1,
+    "size": ["XS", "S"],
+    "rating": 0,
+    "numReviews": 0,
+    "discount": 5,
+    "quantity": 20,
+    "quantity_purchased": 1,
+    "sold": 0,
+    "featured": 1,
+    "category": "620d1c5ac6003c68d049bbb0",
+    "slug": "adidas-plrboost",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "644d52812e7ef56d120782f7"
+    },
+    "title": "Adidas Plrboost",
+    "price": 200,
+    "price_before": 250,
+    "code": "f03fbd11-4c5b-4052-93f9-c3259c24e2f8",
+    "color": ["green", "blue"],
+    "status": 1,
+    "size": ["XS", "S"],
+    "rating": 0,
+    "numReviews": 0,
+    "discount": 5,
+    "quantity": 20,
+    "quantity_purchased": 1,
+    "sold": 0,
+    "featured": 1,
+    "category": "620d1c5ac6003c68d049bbb0",
+    "slug": "adidas-plrboost",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "644d580d6eda169ac93976e5"
+    },
+    "title": "Adidas Ultra 4DFWD",
+    "price": 300,
+    "price_before": 250,
+    "code": "cbe1e959-c74e-4fc5-be08-56601f79c313",
+    "color": ["blue", "red", "pink"],
+    "status": 1,
+    "size": ["M", "L", "XL"],
+    "rating": 0,
+    "numReviews": 0,
+    "discount": 5,
+    "quantity": 20,
+    "quantity_purchased": 1,
+    "sold": 0,
+    "featured": 1,
+    "category": "620d1c5ac6003c68d049bbb0",
+    "slug": "adidas-ultra-4dfwd",
+    "updatedAt": {
+      "$date": "2023-05-18T00:44:41.848Z"
+    },
+    "createdAt": {
+      "$date": "2023-05-18T00:44:41.848Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "644d598bd59f2ba38a9ac8fc"
+    },
+    "title": "Adidas Ultra 4DFWD",
+    "price": 540,
+    "price_before": 250,
+    "code": "bbbba410-622d-47b6-b5d7-8e3955f47be5",
+    "color": ["blue", "red", "pink"],
+    "status": "0",
+    "size": ["S", "M", "L"],
+    "rating": 0,
+    "numReviews": 0,
+    "discount": 4,
+    "quantity": 5,
+    "quantity_purchased": 1,
+    "sold": 0,
+    "featured": 1,
+    "category": {
+      "$oid": "620d1c5ac6003c68d049bbb0"
+    },
+    "updatedAt": {
+      "$date": "2023-05-07T02:56:11.618Z"
+    },
+    "slug": "adidas-ultra-4dfwd",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "645690df4fb4ff9247bbbaf8"
+    },
+    "title": "Adidas Superstar",
+    "price": 220,
+    "price_before": 250,
+    "color": ["green", "blue", "red"],
+    "status": "1",
+    "size": ["S", "M", "L"],
+    "description": "The beloved basketball shoes are headed straight into the Metaverse with the Superstar x Indigo Herz Shoes",
+    "numReviews": 0,
+    "quantity": 20,
+    "featured": 1,
+    "category": {
+      "$oid": "620d1c5ac6003c68d049bbb0"
+    },
+    "updatedAt": {
+      "$date": "2023-05-18T00:47:41.848Z"
+    },
+    "createdAt": {
+      "$date": "2023-05-18T00:47:41.848Z"
+    },
+    "slug": "adidas-superstar",
+    "__v": 0,
+    "quantity_purchased": 2
   }
 ]

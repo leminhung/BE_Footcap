@@ -25,8 +25,7 @@ router.get(
 
 router.get(
   apiEnum.API_GET_PRODUCT_REVIEWS,
-  protect,
-  advancedResults(Review),
+  advancedResults(Review, { path: "user" }),
   getAllReviewsForProduct
 );
 

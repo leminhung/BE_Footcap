@@ -29,7 +29,7 @@ exports.apiEnum = {
   API_UPDATE_COUPON: "/coupons/:couponId",
   API_CREATE_COUPON: "/coupons",
   API_GET_REVIEWS: "/reviews",
-  API_GET_PRODUCT_REVIEWS: "products/:productId/reviews",
+  API_GET_PRODUCT_REVIEWS: "/products/reviews",
   API_DELETE_REVIEW: "/reviews/:reviewId",
   API_UPDATE_REVIEW: "/reviews/:reviewId",
   API_CREATE_REVIEW: "/reviews",

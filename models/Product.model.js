@@ -10,6 +10,10 @@ const productSchema = new mongoose.Schema(
       required: true,
       min: [0, "Price must be at least 0"],
     },
+    price_before: {
+      type: Number,
+      default: 200,
+    },
     color: { type: [String], required: true },
     status: { type: String, required: true },
     size: {

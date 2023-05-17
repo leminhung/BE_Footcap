@@ -1,20 +1,25 @@
-[
-  {
-    "_id": "620d1c5ac6003c68d049bbb0",
-    "description": "hello there",
-    "status": 1,
-    "title": "Áo nam"
+[{
+  "_id": {
+    "$oid": "620d1c5ae5667cdd09ee7e23"
   },
-  {
-    "_id": "620d1c5ac3badda50a46072c",
-    "description": "hello there",
-    "status": 1,
-    "title": "Quần nam"
+  "title": "Adidas",
+  "thumbnail": "/images/collection-1.jpg",
+  "slug": "phu-kien",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "620d1c5ac6003c68d049bbb0"
   },
-  {
-    "_id": "620d1c5ae5667cdd09ee7e23",
-    "description": "hello there",
-    "status": 1,
-    "title": "Phụ kiện"
-  }
-]
+  "title": "Nike",
+  "thumbnail": "/images/collection-2.jpg",
+  "slug": "ao-nam",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "620d1c5ac3badda50a46072c"
+  },
+  "title": "Puma",
+  "thumbnail": "/images/collection-3.jpg",
+  "slug": "quan-nam",
+  "__v": 0
+}]

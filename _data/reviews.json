@@ -1,0 +1,102 @@
+[
+  {
+    "_id": {
+      "$oid": "6462c67aa273d45f8929c75b"
+    },
+    "content": "This product is so beautiful. I will comeback and buy more :vvv",
+    "rating": 5,
+    "user": {
+      "$oid": "64309113f367044f0591fddb"
+    },
+    "product": {
+      "$oid": "645690df4fb4ff9247bbbaf8"
+    },
+    "createdAt": {
+      "$date": "2023-05-15T23:55:38.777Z"
+    },
+    "updatedAt": {
+      "$date": "2023-05-15T23:55:38.777Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6462c92224ae65f95fad29aa"
+    },
+    "content": "This is awesome website. I would love to comeback again. This is awesome website. I would love to comeback again",
+    "rating": 4,
+    "user": {
+      "$oid": "6430f38a2da27759d7b441c0"
+    },
+    "product": {
+      "$oid": "645690df4fb4ff9247bbbaf8"
+    },
+    "createdAt": {
+      "$date": "2023-05-16T00:06:58.899Z"
+    },
+    "updatedAt": {
+      "$date": "2023-05-16T00:06:58.899Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6462c94924ae65f95fad29ac"
+    },
+    "content": "This product is so beautiful. I will comeback and buy more :vvv",
+    "rating": 5,
+    "user": {
+      "$oid": "64309113f367044f0591fddb"
+    },
+    "product": {
+      "$oid": "645690df4fb4ff9247bbbaf8"
+    },
+    "createdAt": {
+      "$date": "2023-05-16T00:07:37.255Z"
+    },
+    "updatedAt": {
+      "$date": "2023-05-16T00:07:37.255Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "646419d516f1646fa482c692"
+    },
+    "content": "This is awesome website. I would love to comeback again. This is awesome website. I would love to comeback again",
+    "rating": 5,
+    "user": {
+      "$oid": "6430f38a2da27759d7b441c0"
+    },
+    "product": {
+      "$oid": "645690df4fb4ff9247bbbaf8"
+    },
+    "createdAt": {
+      "$date": "2023-05-17T00:03:33.273Z"
+    },
+    "updatedAt": {
+      "$date": "2023-05-17T00:03:33.273Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6464f26bf3fa6a8650b140cf"
+    },
+    "content": "The products seem look good :vvvvv. I will introduct your store to my best friends in class haha",
+    "rating": 4,
+    "user": {
+      "$oid": "6430f38a2da27759d7b441c0"
+    },
+    "product": {
+      "$oid": "644d580d6eda169ac93976e5"
+    },
+    "createdAt": {
+      "$date": "2023-05-17T15:27:39.740Z"
+    },
+    "updatedAt": {
+      "$date": "2023-05-17T15:27:39.740Z"
+    },
+    "__v": 0
+  }
+]
