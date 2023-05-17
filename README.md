@@ -24,3 +24,7 @@ $ npm start
 - Chatbot Facebook Messager hỗ trợ mua hàng
 - Thanh toán trực tuyến với Stripe
 - ...
+
+
+#### Lưu ý
+- Thay các biến môi trường trong file .env để có thể chạy project
