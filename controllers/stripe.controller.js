@@ -141,7 +141,7 @@ const createOrder = async (customer, data) => {
       data.customer_details.address.city +
       " - " +
       data.customer_details.address.country,
-    total_price: roundNumber(data.amount_total),
+    total_price: roundNumber(data.amount_total/100),
     status: data.payment_status,
   });
 
