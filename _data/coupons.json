@@ -1,0 +1,58 @@
+[{
+  "_id": {
+    "$oid": "644f7fb056622e4d937fe21b"
+  },
+  "coupon_code": "ABCCCC",
+  "coupon_value": 150,
+  "coupon_start_date": {
+    "$date": "2023-05-01T00:00:00.000Z"
+  },
+  "coupon_end_date": {
+    "$date": "2023-05-04T00:00:00.000Z"
+  },
+  "coupon_spend": 10,
+  "coupon_status": [
+    "active"
+  ],
+  "coupon_uses_per_coupon": 5,
+  "coupon_count_per_coupon": 1,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "644fd7adf7a95a6cb189e2cc"
+  },
+  "coupon_code": "AABCCCC",
+  "coupon_value": 150,
+  "coupon_start_date": {
+    "$date": "2023-05-01T00:00:00.000Z"
+  },
+  "coupon_end_date": {
+    "$date": "2023-05-09T00:00:00.000Z"
+  },
+  "coupon_spend": 10,
+  "coupon_status": [
+    "active"
+  ],
+  "coupon_uses_per_coupon": 5,
+  "coupon_count_per_coupon": 1,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6456253dc16d7048d64553bd"
+  },
+  "coupon_code": "ABCABC",
+  "coupon_value": 200,
+  "coupon_start_date": {
+    "$date": "2023-05-06T00:00:00.000Z"
+  },
+  "coupon_end_date": {
+    "$date": "2023-05-21T00:00:00.000Z"
+  },
+  "coupon_spend": 15,
+  "coupon_status": [
+    "active"
+  ],
+  "coupon_uses_per_coupon": 6,
+  "coupon_count_per_coupon": 1,
+  "__v": 0
+}]

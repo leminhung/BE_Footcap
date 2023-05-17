@@ -1,25 +1,67 @@
 [{
   "_id": {
-    "$oid": "620d1c5ae5667cdd09ee7e23"
+    "$oid": "620d1c5ac6003c68d049bbb0"
   },
-  "title": "Adidas",
-  "thumbnail": "/images/collection-1.jpg",
-  "slug": "phu-kien",
+  "title": "Shoes",
+  "description": "hello there",
+  "status": 1,
+  "thumbnail": "",
+  "slug": "shoes",
   "__v": 0
 },{
   "_id": {
-    "$oid": "620d1c5ac6003c68d049bbb0"
+    "$oid": "620d1c5ae5667cdd09ee7e23"
   },
-  "title": "Nike",
-  "thumbnail": "/images/collection-2.jpg",
-  "slug": "ao-nam",
+  "title": "Clothes",
+  "description": "hello there",
+  "status": 1,
+  "thumbnail": "/images/categories/clothes.jpg",
+  "slug": "clothes",
+  "__v": 0,
+  "updatedAt": {
+    "$date": "2023-04-30T05:59:00.586Z"
+  }
+},{
+  "_id": {
+    "$oid": "644dfb9d6d5ed94f4cd3100c"
+  },
+  "title": "Bag",
+  "description": "Hello",
+  "status": 1,
+  "thumbnail": "/images/categories/bag.jpg",
+  "createdAt": {
+    "$date": "2023-04-30T05:24:45.781Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-30T05:24:45.781Z"
+  },
+  "slug": "bag",
   "__v": 0
 },{
   "_id": {
     "$oid": "620d1c5ac3badda50a46072c"
   },
-  "title": "Puma",
-  "thumbnail": "/images/collection-3.jpg",
-  "slug": "quan-nam",
+  "title": "Accessitory",
+  "thumbnail": "/images/categories/accessories.jpg",
+  "slug": "accessory",
+  "__v": 0,
+  "updatedAt": {
+    "$date": "2023-04-30T06:01:15.969Z"
+  }
+},{
+  "_id": {
+    "$oid": "644e03368677b28e006be6c0"
+  },
+  "title": "Watch",
+  "description": "Hello",
+  "status": 1,
+  "thumbnail": "/images/categories/watch.jpg",
+  "createdAt": {
+    "$date": "2023-04-30T05:57:10.909Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-30T05:57:10.909Z"
+  },
+  "slug": "watch",
   "__v": 0
 }]
